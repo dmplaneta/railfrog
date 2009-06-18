@@ -24,6 +24,7 @@ class Railfrog::SiteDefinitionLoader
     raise "#{Railfrog::SiteLoader::SITE_YML} file is empty" unless root_node
     raise "#{Railfrog::SiteLoader::SITE_YML} file contains no 'root' tag" if root_node["root"].nil?
 
+    Railfrog::info "Content SiteMapping #{SiteMapping.find :all}"
     parse_definition SiteMapping.find_root, root_node["root"]
   end
 

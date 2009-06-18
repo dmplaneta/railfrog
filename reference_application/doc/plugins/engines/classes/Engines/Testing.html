@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Engines::Testing</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Engines::Testing</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/vendor/plugins/engines/lib/engines/testing_rb.html">
+                vendor/plugins/engines/lib/engines/testing.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+In most cases, <a href="../Rails.html">Rails</a>&#8217; own plugin testing
+mechanisms are sufficient. However, there are cases where plugins can be
+given a helping hand in the testing arena. This module contains some
+methods to assist when testing plugins that contain fixtures.
+</p>
+<h2>Fixtures and plugins</h2>
+<p>
+Since <a href="../Rails.html">Rails</a>&#8217; own fixtures method is
+fairly strict about where files can be loaded from, the simplest approach
+when running plugin tests with fixtures is to simply copy all fixtures into
+a single temporary location and inform the standard <a
+href="../Rails.html">Rails</a> mechanism to use this directory, rather than
+RAILS_ROOT/test/fixtures.
+</p>
+<p>
+The <a
+href="Testing.html#M000019">Engines::Testing#setup_plugin_fixtures</a>
+method does this, copying all plugin fixtures into the temporary location
+before and tests are performed. This behaviour is invoked the the rake
+tasks provided by the <a href="../Engines.html">Engines</a> plugin, in the
+&quot;test:plugins&quot; namespace. If necessary, you can invoke the task
+manually.
+</p>
+<p>
+If you wish to take advantage of this, add a call to the <a
+href="Testing.html#M000020">Engines::Testing.set_fixture_path</a> method
+somewhere before your tests (in a test_helper file, or above the TestCase
+itself).
+</p>
+<h1><a href="Testing.html">Testing</a> plugins</h1>
+<p>
+Normally testing a plugin will require that <a
+href="../Rails.html">Rails</a> is loaded, unless you are including a
+skeleton <a href="../Rails.html">Rails</a> environment or set of mocks
+within your plugin tests. If you require the <a
+href="../Rails.html">Rails</a> environment to be started, you must ensure
+that this actually happens; while it&#8216;s not obvious, your tests do not
+automatically run with <a href="../Rails.html">Rails</a> loaded.
+</p>
+<p>
+The simplest way to setup plugin tests is to include a test helper with the
+following contents:
+</p>
+<pre>
+  # Load the normal Rails helper. This ensures the environment is loaded
+  require File.expand_path(File.dirname(__FILE__) + '/../../../../test/test_helper')
+  # Ensure that we are using the temporary fixture path
+  Engines::Testing.set_fixture_path
+</pre>
+<p>
+Then run tests using the provided tasks (<tt>test:plugins</tt>, or the
+tasks that the engines plugin provides - <tt>test:plugins:units</tt>,
+etc.).
+</p>
+<p>
+Alternatively, you can explicitly load the environment by adpating the
+contents of the default <tt>test_helper</tt>:
+</p>
+<pre>
+  ENV[&quot;RAILS_ENV&quot;] = &quot;test&quot;
+  # Note that we are requiring config/environment from the root of the enclosing application.
+  require File.expand_path(File.dirname(__FILE__) + &quot;/../../../../config/environment&quot;)
+  require 'test_help'
+</pre>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000021">override_tests_from_app</a>&nbsp;&nbsp;
+      <a href="#M000020">set_fixture_path</a>&nbsp;&nbsp;
+      <a href="#M000019">setup_plugin_fixtures</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="#M000021" class="method-signature">
+          <span class="method-name">override_tests_from_app</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+overridden test should be in
+test/{unit,functional,integration}/{plugin_name}/{test_name}
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000021-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000021-source">
+<pre>
+     <span class="ruby-comment cmt"># File vendor/plugins/engines/lib/engines/testing.rb, line 93</span>
+ 93:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">override_tests_from_app</span>
+ 94:     <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">caller</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>).<span class="ruby-identifier">first</span>
+ 95:     <span class="ruby-identifier">plugin_name</span> = <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;/&quot;</span>)[<span class="ruby-value">-4</span>]
+ 96:     <span class="ruby-identifier">test_kind</span> = <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;/&quot;</span>)[<span class="ruby-value">-2</span>]
+ 97:     <span class="ruby-identifier">override_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">filename</span>), <span class="ruby-value str">&quot;..&quot;</span>, <span class="ruby-value str">&quot;..&quot;</span>, <span class="ruby-value str">&quot;..&quot;</span>, <span class="ruby-value str">&quot;..&quot;</span>, <span class="ruby-value str">&quot;..&quot;</span>, <span class="ruby-value str">&quot;test&quot;</span>, 
+ 98:                                                <span class="ruby-identifier">test_kind</span>, <span class="ruby-identifier">plugin_name</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">filename</span>)))
+ 99:     <span class="ruby-identifier">load</span>(<span class="ruby-identifier">override_file</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">override_file</span>)
+100:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="#M000020" class="method-signature">
+          <span class="method-name">set_fixture_path</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the fixture path used by Test::Unit::TestCase to the temporary
+directory which contains all plugin fixtures.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000020-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000020-source">
+<pre>
+    <span class="ruby-comment cmt"># File vendor/plugins/engines/lib/engines/testing.rb, line 87</span>
+87:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_fixture_path</span>
+88:     <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">TestCase</span>.<span class="ruby-identifier">fixture_path</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">temporary_fixtures_directory</span>
+89:     <span class="ruby-identifier">$LOAD_PATH</span>.<span class="ruby-identifier">unshift</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">temporary_fixtures_directory</span>
+90:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="#M000019" class="method-signature">
+          <span class="method-name">setup_plugin_fixtures</span><span class="method-args">(plugins = Engines.plugins.by_precedence)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Copies fixtures from plugins and the application into a temporary directory
+(Engines::Testing.temporary_fixtures_directory).
+</p>
+<p>
+If a set of plugins is not given, fixtures are copied from all plugins in
+order of precedence, meaning that plugins can &#8216;overwrite&#8217; the
+fixtures of others if they are loaded later; the application&#8216;s
+fixtures are copied last, allowing any custom fixtures to override those in
+the plugins. If no argument is given, plugins are loaded via
+PluginList#by_precedence.
+</p>
+<p>
+This method is called by the engines-supplied plugin testing rake tasks
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000019-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000019-source">
+<pre>
+    <span class="ruby-comment cmt"># File vendor/plugins/engines/lib/engines/testing.rb, line 68</span>
+68:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">setup_plugin_fixtures</span>(<span class="ruby-identifier">plugins</span> = <span class="ruby-constant">Engines</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">by_precedence</span>)
+69:     
+70:     <span class="ruby-comment cmt"># First, clear the directory</span>
+71:     <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-node">&quot;#{self.temporary_fixtures_directory}/*.yml&quot;</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">fixture</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">fixture</span>)}
+72:     
+73:     <span class="ruby-comment cmt"># Copy all plugin fixtures, and then the application fixtures, into this directory</span>
+74:     <span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">plugin</span><span class="ruby-operator">|</span> 
+75:       <span class="ruby-identifier">plugin_fixtures_directory</span> =  <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">plugin</span>.<span class="ruby-identifier">directory</span>, <span class="ruby-value str">&quot;test&quot;</span>, <span class="ruby-value str">&quot;fixtures&quot;</span>)
+76:       <span class="ruby-identifier">plugin_app_directory</span> =  <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">plugin</span>.<span class="ruby-identifier">directory</span>, <span class="ruby-value str">&quot;app&quot;</span>)
+77:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">plugin_app_directory</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">plugin_fixtures_directory</span>)
+78:         <span class="ruby-constant">Engines</span>.<span class="ruby-identifier">mirror_files_from</span>(<span class="ruby-identifier">plugin_fixtures_directory</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">temporary_fixtures_directory</span>)
+79:       <span class="ruby-keyword kw">end</span>
+80:     <span class="ruby-keyword kw">end</span>
+81:     <span class="ruby-constant">Engines</span>.<span class="ruby-identifier">mirror_files_from</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>, <span class="ruby-value str">&quot;test&quot;</span>, <span class="ruby-value str">&quot;fixtures&quot;</span>),
+82:                               <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">temporary_fixtures_directory</span>)
+83:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+ActionController::Routing::Routes.draw do |map|
+
+  map.resources :alba_lawyers
+  
+  map.resources :albaru, :collection => {:autocomplete_for_alba_lawyer_first_name_ru=>:get}
+
+  map.resources :albaen, :collection => {:autocomplete_for_alba_lawyer_first_name_en=>:get}
+
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
+end

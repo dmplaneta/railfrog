@@ -87,6 +87,7 @@ class SiteMapping < ActiveRecord::Base
       conditions << "parent_mappings_site_mappings_#{path.size - 1}.parent_id IS NULL"
     elsif path.size == 2
       conditions << "parent_mappings_site_mappings.parent_id IS NULL"
+      puts conditions
     elsif path.size == 1
       conditions << "site_mappings.parent_id IS NULL"
     end
