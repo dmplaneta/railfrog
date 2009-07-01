@@ -9,83 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090614110756) do
-
-  create_table "alba_lawyers", :force => true do |t|
-    t.string   "first_name_ru"
-    t.string   "patronimic_ru"
-    t.string   "last_name_ru"
-    t.integer  "alba_position_id"
-    t.text     "description_ru"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.string   "first_name_en"
-    t.string   "patronimic_en"
-    t.string   "last_name_en"
-    t.text     "description_en"
-    t.string   "first_name_de"
-    t.string   "patronimic_de"
-    t.string   "last_name_de"
-    t.text     "description_de"
-    t.string   "first_name_fr"
-    t.string   "patronimic_fr"
-    t.string   "last_name_fr"
-    t.text     "description_fr"
-  end
-
-  create_table "alba_lawyers_alba_offices", :id => false, :force => true do |t|
-    t.integer "alba_lawyer_id"
-    t.integer "alba_office_id"
-  end
-
-  create_table "alba_lawyers_alba_practices", :id => false, :force => true do |t|
-    t.integer "alba_lawyer_id"
-    t.integer "alba_practice_id"
-  end
-
-  create_table "alba_offices", :force => true do |t|
-    t.string   "name_ru"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name_en"
-    t.string   "name_de"
-    t.string   "name_fr"
-  end
-
-  create_table "alba_photos", :force => true do |t|
-    t.integer  "album_id"
-    t.integer  "parent_id"
-    t.integer  "size"
-    t.integer  "width"
-    t.integer  "height"
-    t.string   "content_type"
-    t.string   "filename"
-    t.string   "thumbnail"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "alba_positions", :force => true do |t|
-    t.string   "name_ru"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name_en"
-    t.string   "name_de"
-    t.string   "name_fr"
-  end
-
-  create_table "alba_practices", :force => true do |t|
-    t.string   "name_ru"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name_en"
-    t.string   "name_de"
-    t.string   "name_fr"
-  end
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "chunk_versions", :force => true do |t|
     t.integer  "chunk_id"
@@ -130,15 +54,6 @@ ActiveRecord::Schema.define(:version => 20090614110756) do
   end
 
   add_index "mime_types", ["mime_type"], :name => "mime_types_mime_type_index"
-
-  create_table "plugin_schema_info", :id => false, :force => true do |t|
-    t.string  "plugin_name"
-    t.integer "version"
-  end
-
-  create_table "schema_info", :id => false, :force => true do |t|
-    t.integer "version"
-  end
 
   create_table "site_mappings", :force => true do |t|
     t.string   "path_segment", :default => "",    :null => false
