@@ -3,7 +3,7 @@ class SiteMapping < ActiveRecord::Base
   ROOT_DIR = ''
   FILE_SEPARATOR = '/'
 
-  acts_as_nested_set
+   acts_as_nested_set
 
   belongs_to :chunk
   has_many :mapping_labels, :dependent => :destroy
