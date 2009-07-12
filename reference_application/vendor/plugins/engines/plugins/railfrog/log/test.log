@@ -1,0 +1,1955 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-07-12 20:28:51) [POST]
+  Parameters: {"user"=>{}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `last_name`, `password`, `first_name`, `email`) VALUES('2009-07-12 16:28:51', '2009-07-12 16:28:51', '', '', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-07-12 20:28:51) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-07-12 20:28:51) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-07-12 20:31:01) [POST]
+  Parameters: {"user"=>{}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-07-12 20:31:01) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-07-12 20:31:01) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-07-12 20:32:59) [POST]
+  Parameters: {"user"=>{}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/railfrog_admin
+Rendering users/new
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://test.host/users/create?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-07-12 20:32:59) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-07-12 20:32:59) [GET]
+Rendering template within layouts/railfrog_admin
+Rendering users/new
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Unable to load chunk, underlying cause no such file to load -- chunk 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load file_extension, underlying cause no such file to load -- file_extension 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load site_mapping, underlying cause no such file to load -- site_mapping 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mime_type, underlying cause no such file to load -- mime_type 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mapping_label, underlying cause no such file to load -- mapping_label 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load chunk_version, underlying cause no such file to load -- chunk_version 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Unable to load chunk, underlying cause no such file to load -- chunk 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load file_extension, underlying cause no such file to load -- file_extension 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load site_mapping, underlying cause no such file to load -- site_mapping 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mime_type, underlying cause no such file to load -- mime_type 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mapping_label, underlying cause no such file to load -- mapping_label 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load chunk_version, underlying cause no such file to load -- chunk_version 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Unable to load chunk, underlying cause no such file to load -- chunk 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load file_extension, underlying cause no such file to load -- file_extension 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load site_mapping, underlying cause no such file to load -- site_mapping 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mime_type, underlying cause no such file to load -- mime_type 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mapping_label, underlying cause no such file to load -- mapping_label 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load chunk_version, underlying cause no such file to load -- chunk_version 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/unit/user_test.rb:1:in `require'
+./test/unit/user_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Unable to load chunk, underlying cause no such file to load -- chunk 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load file_extension, underlying cause no such file to load -- file_extension 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load site_mapping, underlying cause no such file to load -- site_mapping 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mime_type, underlying cause no such file to load -- mime_type 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load mapping_label, underlying cause no such file to load -- mapping_label 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+Unable to load chunk_version, underlying cause no such file to load -- chunk_version 
+
+ /usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:850:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:862:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/fixtures.rb:845:in `fixtures'
+./test/test_helper.rb:35
+./test/functional/users_controller_test.rb:1:in `require'
+./test/functional/users_controller_test.rb:1
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `load'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5:in `each'
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.5/lib/rake/rake_test_loader.rb:5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-07-12 21:09:34) [POST]
+  Parameters: {"user"=>{}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://test.host/users/login
+Filter chain halted as [:ensure_logged_in] rendered_or_redirected.
+Completed in 1ms (DB: 24) | 302 Found [http://test.host/users/create?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-07-12 21:09:34) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-07-12 21:09:34) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://test.host/users/login
+Filter chain halted as [:ensure_logged_in] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-07-12 23:13:29) [POST]
+  Parameters: {"user"=>{}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://test.host/users/login
+Filter chain halted as [:ensure_logged_in] rendered_or_redirected.
+Completed in 1ms (DB: 18) | 302 Found [http://test.host/users/create?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-07-12 23:13:29) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-07-12 23:13:29) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://test.host/users/login
+Filter chain halted as [:ensure_logged_in] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-07-12 23:22:57) [POST]
+  Parameters: {"user"=>{}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://test.host/users/login
+Filter chain halted as [:ensure_logged_in] rendered_or_redirected.
+Completed in 1ms (DB: 13) | 302 Found [http://test.host/users/create?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-07-12 23:22:57) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-07-12 23:22:57) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://test.host/users/login
+Filter chain halted as [:ensure_logged_in] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSiteMapping Delete all (0.2ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.1ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSiteMapping Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `site_mappings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `mapping_labels`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mChunk Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunks`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mChunkVersion Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunk_versions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSiteMapping Delete all (1.1ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.5ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.5ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.8ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Delete all (0.2ms)[0m   [0;1mDELETE FROM `site_mappings` [0m
+  [4;35;1mMappingLabel Delete all (0.1ms)[0m   [0mDELETE FROM `mapping_labels` [0m
+  [4;36;1mChunk Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunks` [0m
+  [4;35;1mChunkVersion Delete all (0.1ms)[0m   [0mDELETE FROM `chunk_versions` [0m
+  [4;36;1mMimeType Delete all (0.0ms)[0m   [0;1mDELETE FROM `mime_types` [0m
+  [4;35;1mFileExtension Delete all (0.0ms)[0m   [0mDELETE FROM `file_extensions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.0ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.0ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSiteMapping Delete all (0.2ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.1ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSiteMapping Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `site_mappings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `mapping_labels`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mChunk Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunks`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mChunkVersion Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunk_versions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSiteMapping Delete all (1.4ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.4ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.8ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.7ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Delete all (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` [0m
+  [4;35;1mMappingLabel Delete all (0.1ms)[0m   [0mDELETE FROM `mapping_labels` [0m
+  [4;36;1mChunk Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunks` [0m
+  [4;35;1mChunkVersion Delete all (0.1ms)[0m   [0mDELETE FROM `chunk_versions` [0m
+  [4;36;1mMimeType Delete all (0.0ms)[0m   [0;1mDELETE FROM `mime_types` [0m
+  [4;35;1mFileExtension Delete all (0.0ms)[0m   [0mDELETE FROM `file_extensions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.0ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.0ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSiteMapping Delete all (0.2ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.1ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSiteMapping Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `site_mappings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `mapping_labels`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mChunk Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunks`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mChunkVersion Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunk_versions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSiteMapping Delete all (1.4ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.4ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.8ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.7ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Delete all (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` [0m
+  [4;35;1mMappingLabel Delete all (0.1ms)[0m   [0mDELETE FROM `mapping_labels` [0m
+  [4;36;1mChunk Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunks` [0m
+  [4;35;1mChunkVersion Delete all (0.1ms)[0m   [0mDELETE FROM `chunk_versions` [0m
+  [4;36;1mMimeType Delete all (0.0ms)[0m   [0;1mDELETE FROM `mime_types` [0m
+  [4;35;1mFileExtension Delete all (0.0ms)[0m   [0mDELETE FROM `file_extensions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.0ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSiteMapping Delete all (0.2ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.1ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSiteMapping Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `site_mappings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `mapping_labels`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mChunk Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunks`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mChunkVersion Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunk_versions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSiteMapping Delete all (1.3ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.8ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.5ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (1.0ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Delete all (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` [0m
+  [4;35;1mMappingLabel Delete all (0.1ms)[0m   [0mDELETE FROM `mapping_labels` [0m
+  [4;36;1mChunk Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunks` [0m
+  [4;35;1mChunkVersion Delete all (0.1ms)[0m   [0mDELETE FROM `chunk_versions` [0m
+  [4;36;1mMimeType Delete all (0.0ms)[0m   [0;1mDELETE FROM `mime_types` [0m
+  [4;35;1mFileExtension Delete all (0.0ms)[0m   [0mDELETE FROM `file_extensions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.0ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.0ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSiteMapping Delete all (0.2ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.1ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSiteMapping Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `site_mappings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `mapping_labels`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mChunk Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunks`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mChunkVersion Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunk_versions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSiteMapping Delete all (1.3ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.4ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.5ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.9ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Delete all (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` [0m
+  [4;35;1mMappingLabel Delete all (0.0ms)[0m   [0mDELETE FROM `mapping_labels` [0m
+  [4;36;1mChunk Delete all (0.0ms)[0m   [0;1mDELETE FROM `chunks` [0m
+  [4;35;1mChunkVersion Delete all (0.4ms)[0m   [0mDELETE FROM `chunk_versions` [0m
+  [4;36;1mMimeType Delete all (0.0ms)[0m   [0;1mDELETE FROM `mime_types` [0m
+  [4;35;1mFileExtension Delete all (0.0ms)[0m   [0mDELETE FROM `file_extensions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Delete all (0.0ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.0ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.0ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.0ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mChunkVersion Load (0.1ms)[0m   [0;1mSELECT * FROM `chunk_versions` LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFileExtension Load (0.1ms)[0m   [0mSELECT * FROM `file_extensions` LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMimeType Load (0.1ms)[0m   [0mSELECT * FROM `mime_types` LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.3ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.4ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.2ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.2ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.2ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.3ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.2ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.2ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.4ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.2ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.2ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.2ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.2ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.4ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.3ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.0ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.0ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.4ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.4ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.2ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.2ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.5ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.4ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.2ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.3ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.4ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.2ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.2ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.3ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.2ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.3ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM `chunks` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 1) ORDER BY version[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunkVersion Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` WHERE `id` = 1[0m
+  [4;35;1mChunkVersion Destroy (0.1ms)[0m   [0mDELETE FROM `chunk_versions` WHERE `id` = 2[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM `chunk_versions` WHERE (`chunk_versions`.chunk_id = 2) ORDER BY version[0m
+  [4;36;1mChunk Destroy (0.1ms)[0m   [0;1mDELETE FROM `chunks` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Exists (0.1ms)[0m   [0;1mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSiteMapping Exists (0.4ms)[0m   [0mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT max(`site_mappings`.rgt) AS max_rgt FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Create (0.1ms)[0m   [0mINSERT INTO `site_mappings` (`is_internal`, `chunk_id`, `updated_at`, `depth`, `root_id`, `lft`, `path_segment`, `version`, `parent_id`, `rgt`) VALUES(0, NULL, '2009-07-12 20:12:22', NULL, NULL, 19, 'cakes', NULL, NULL, 20)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Exists (0.1ms)[0m   [0mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSiteMapping Exists (0.1ms)[0m   [0;1mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT max(`site_mappings`.rgt) AS max_rgt FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Create (0.1ms)[0m   [0;1mINSERT INTO `site_mappings` (`is_internal`, `chunk_id`, `updated_at`, `depth`, `root_id`, `lft`, `path_segment`, `version`, `parent_id`, `rgt`) VALUES(0, NULL, '2009-07-12 20:12:22', NULL, NULL, 19, 'cakes', NULL, NULL, 20)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Exists (0.1ms)[0m   [0;1mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'child1' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSiteMapping Exists (0.1ms)[0m   [0mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'child1' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT max(`site_mappings`.rgt) AS max_rgt FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Create (0.1ms)[0m   [0mINSERT INTO `site_mappings` (`is_internal`, `chunk_id`, `updated_at`, `depth`, `root_id`, `lft`, `path_segment`, `version`, `parent_id`, `rgt`) VALUES(1, NULL, '2009-07-12 20:12:22', NULL, NULL, 19, 'child1', NULL, NULL, 20)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.3ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Exists (0.1ms)[0m   [0mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'child' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSiteMapping Exists (0.1ms)[0m   [0;1mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'child' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT max(`site_mappings`.rgt) AS max_rgt FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Create (0.1ms)[0m   [0;1mINSERT INTO `site_mappings` (`is_internal`, `chunk_id`, `updated_at`, `depth`, `root_id`, `lft`, `path_segment`, `version`, `parent_id`, `rgt`) VALUES(0, NULL, '2009-07-12 20:12:22', NULL, NULL, 19, 'child', NULL, NULL, 20)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Delete all (0.4ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Delete all (0.4ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;35;1mSiteMapping Destroy (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.7ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 2 AND `rgt` < 7) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 6) WHERE (`lft` > 7) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 6) WHERE (`rgt` > 7) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 2) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 2 and rgt < 7[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 3 AND `rgt` < 4) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 2) WHERE (`lft` > 4) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 2) WHERE (`rgt` > 4) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 3) [0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 2[0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 3[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 4[0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 5[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 2[0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 3[0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 4[0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 5[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 3 and rgt < 4[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 3[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 5 AND `rgt` < 6) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 2) WHERE (`lft` > 6) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 2) WHERE (`rgt` > 6) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 4) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 5 and rgt < 6[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 4[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 8 AND `rgt` < 15) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 8) WHERE (`lft` > 15) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 8) WHERE (`rgt` > 15) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 5) [0m
+  [4;35;1mMappingLabel Destroy (0.1ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 6[0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 6[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 8 and rgt < 15[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 9 AND `rgt` < 10) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 2) WHERE (`lft` > 10) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 2) WHERE (`rgt` > 10) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 6) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 9 and rgt < 10[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 6[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 11 AND `rgt` < 12) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 2) WHERE (`lft` > 12) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 2) WHERE (`rgt` > 12) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 7) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 11 and rgt < 12[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 7[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 13 AND `rgt` < 14) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 2) WHERE (`lft` > 14) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 2) WHERE (`rgt` > 14) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 8) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 13 and rgt < 14[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 8[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 16 AND `rgt` < 17) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 2) WHERE (`lft` > 17) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 2) WHERE (`rgt` > 17) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 9) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 16 and rgt < 17[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 9[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Delete all (0.3ms)[0m   [0mDELETE FROM `site_mappings` WHERE (`lft` > 1 AND `rgt` < 18) [0m
+  [4;36;1mSiteMapping Update (0.1ms)[0m   [0;1mUPDATE `site_mappings` SET `lft` = (`lft` - 18) WHERE (`lft` > 18) [0m
+  [4;35;1mSiteMapping Update (0.1ms)[0m   [0mUPDATE `site_mappings` SET `rgt` = (`rgt` - 18) WHERE (`rgt` > 18) [0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;35;1mMappingLabel Destroy (0.2ms)[0m   [0mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;36;1mMappingLabel Destroy (0.1ms)[0m   [0;1mDELETE FROM `mapping_labels` WHERE `id` = 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mselect id from site_mappings where lft > 1 and rgt < 18[0m
+  [4;36;1mSiteMapping Destroy (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (site_mappings.path_segment like '' AND site_mappings.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT `mapping_labels`.* FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSiteMapping Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'parent_mappings_site_mappings_2.path_segment' in 'where clause': SELECT DISTINCT `site_mappings`.id FROM `site_mappings` LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id WHERE (site_mappings.path_segment like 'main_layout' AND parent_mappings_site_mappings.path_segment like 'layouts' AND parent_mappings_site_mappings_2.path_segment like '' AND parent_mappings_site_mappings_2.parent_id IS NULL AND site_mappings.is_internal = 0) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSiteMapping Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'parent_mappings_site_mappings_2.path_segment' in 'where clause': SELECT DISTINCT `site_mappings`.id FROM `site_mappings` LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id WHERE (site_mappings.path_segment like 'logo.jpg' AND parent_mappings_site_mappings.path_segment like 'images' AND parent_mappings_site_mappings_2.path_segment like '' AND parent_mappings_site_mappings_2.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (site_mappings.path_segment like '' AND site_mappings.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mMappingLabel Load (0.1ms)[0m   [0;1mSELECT `mapping_labels`.* FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+Looking for chunk version
+  [4;35;1mSiteMapping Load IDs For Limited Eager Loading (0.2ms)[0m   [0mSELECT DISTINCT `site_mappings`.id FROM `site_mappings` LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id WHERE (site_mappings.path_segment like 'images' AND parent_mappings_site_mappings.path_segment like '' AND parent_mappings_site_mappings.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSiteMapping Load Including Associations (0.4ms)[0m   [0;1mSELECT `site_mappings`.`id` AS t0_r0, `site_mappings`.`path_segment` AS t0_r1, `site_mappings`.`chunk_id` AS t0_r2, `site_mappings`.`version` AS t0_r3, `site_mappings`.`updated_at` AS t0_r4, `site_mappings`.`root_id` AS t0_r5, `site_mappings`.`parent_id` AS t0_r6, `site_mappings`.`depth` AS t0_r7, `site_mappings`.`lft` AS t0_r8, `site_mappings`.`rgt` AS t0_r9, `site_mappings`.`is_internal` AS t0_r10, `chunks`.`id` AS t1_r0, `chunks`.`description` AS t1_r1, `chunks`.`live_version` AS t1_r2, `chunks`.`mime_type_id` AS t1_r3, `chunks`.`mime_type_str` AS t1_r4, `chunk_versions`.`id` AS t2_r0, `chunk_versions`.`chunk_id` AS t2_r1, `chunk_versions`.`version` AS t2_r2, `chunk_versions`.`base_version` AS t2_r3, `chunk_versions`.`content` AS t2_r4, `chunk_versions`.`created_at` AS t2_r5, `chunk_versions`.`updated_at` AS t2_r6, `chunk_versions`.`comments` AS t2_r7, `mapping_labels`.`id` AS t3_r0, `mapping_labels`.`site_mapping_id` AS t3_r1, `mapping_labels`.`name` AS t3_r2, `mapping_labels`.`value` AS t3_r3, `parent_mappings_site_mappings`.`id` AS t4_r0, `parent_mappings_site_mappings`.`path_segment` AS t4_r1, `parent_mappings_site_mappings`.`chunk_id` AS t4_r2, `parent_mappings_site_mappings`.`version` AS t4_r3, `parent_mappings_site_mappings`.`updated_at` AS t4_r4, `parent_mappings_site_mappings`.`root_id` AS t4_r5, `parent_mappings_site_mappings`.`parent_id` AS t4_r6, `parent_mappings_site_mappings`.`depth` AS t4_r7, `parent_mappings_site_mappings`.`lft` AS t4_r8, `parent_mappings_site_mappings`.`rgt` AS t4_r9, `parent_mappings_site_mappings`.`is_internal` AS t4_r10, `mapping_labels_site_mappings`.`id` AS t5_r0, `mapping_labels_site_mappings`.`site_mapping_id` AS t5_r1, `mapping_labels_site_mappings`.`name` AS t5_r2, `mapping_labels_site_mappings`.`value` AS t5_r3 FROM `site_mappings` LEFT OUTER JOIN `chunks` ON `chunks`.id = `site_mappings`.chunk_id LEFT OUTER JOIN `chunk_versions` ON chunk_versions.chunk_id = chunks.id AND chunk_versions.version = chunks.live_version LEFT OUTER JOIN `mapping_labels` ON mapping_labels.site_mapping_id = site_mappings.id LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id LEFT OUTER JOIN `mapping_labels` mapping_labels_site_mappings ON mapping_labels_site_mappings.site_mapping_id = parent_mappings_site_mappings.id WHERE (site_mappings.path_segment like 'images' AND parent_mappings_site_mappings.path_segment like '' AND parent_mappings_site_mappings.parent_id IS NULL) AND `site_mappings`.id IN (2) [0m
+Looking for chunk version
+  [4;35;1mSiteMapping Load IDs For Limited Eager Loading (0.0ms)[0m   [0mMysql::Error: Unknown column 'parent_mappings_site_mappings_2.path_segment' in 'where clause': SELECT DISTINCT `site_mappings`.id FROM `site_mappings` LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id WHERE (site_mappings.path_segment like 'logo.jpg' AND parent_mappings_site_mappings.path_segment like 'images' AND parent_mappings_site_mappings_2.path_segment like '' AND parent_mappings_site_mappings_2.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Load (0.3ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` = 1 AND `site_mappings`.`path_segment` = 'cakes') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Exists (0.1ms)[0m   [0mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSiteMapping Exists (0.1ms)[0m   [0;1mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT max(`site_mappings`.rgt) AS max_rgt FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Create (0.2ms)[0m   [0;1mINSERT INTO `site_mappings` (`is_internal`, `chunk_id`, `updated_at`, `depth`, `root_id`, `lft`, `path_segment`, `version`, `parent_id`, `rgt`) VALUES(0, NULL, '2009-07-12 20:12:22', NULL, NULL, 19, 'cakes', NULL, NULL, 20)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((1 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 2) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((2 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 3) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((3 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 4) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((5 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 9) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((16 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 6) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((9 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 7) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((11 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSiteMapping Load (0.3ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 8) [0m
+  [4;35;1mSiteMapping Load (0.2ms)[0m   [0mSELECT * FROM `site_mappings` WHERE ((13 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSiteMapping Exists (0.1ms)[0m   [0mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSiteMapping Exists (0.1ms)[0m   [0;1mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT max(`site_mappings`.rgt) AS max_rgt FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Create (0.1ms)[0m   [0;1mINSERT INTO `site_mappings` (`is_internal`, `chunk_id`, `updated_at`, `depth`, `root_id`, `lft`, `path_segment`, `version`, `parent_id`, `rgt`) VALUES(0, NULL, '2009-07-12 20:12:22', NULL, NULL, 19, 'cakes', NULL, NULL, 20)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSiteMapping Exists (0.1ms)[0m   [0;1mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSiteMapping Exists (0.1ms)[0m   [0mSELECT `site_mappings`.id FROM `site_mappings` WHERE (`site_mappings`.`path_segment` = BINARY 'cakes' AND `site_mappings`.parent_id IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT max(`site_mappings`.rgt) AS max_rgt FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Create (0.1ms)[0m   [0mINSERT INTO `site_mappings` (`is_internal`, `chunk_id`, `updated_at`, `depth`, `root_id`, `lft`, `path_segment`, `version`, `parent_id`, `rgt`) VALUES(0, NULL, '2009-07-12 20:12:22', NULL, NULL, 19, 'cakes', NULL, NULL, 20)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` WHERE ((16 BETWEEN lft AND rgt)) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` WHERE ((2 BETWEEN lft AND rgt)) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` WHERE ((3 BETWEEN lft AND rgt)) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` WHERE ((5 BETWEEN lft AND rgt)) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` WHERE ((8 BETWEEN lft AND rgt)) [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` WHERE ((9 BETWEEN lft AND rgt)) [0m
+  [4;35;1mSiteMapping Delete all (0.4ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (site_mappings.path_segment like '' AND site_mappings.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT `mapping_labels`.* FROM `mapping_labels` WHERE (`mapping_labels`.site_mapping_id = 1) [0m
+  [4;36;1mSiteMapping Load IDs For Limited Eager Loading (0.2ms)[0m   [0;1mSELECT DISTINCT `site_mappings`.id FROM `site_mappings` LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id WHERE (site_mappings.path_segment like 'images' AND parent_mappings_site_mappings.path_segment like '' AND parent_mappings_site_mappings.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSiteMapping Load Including Associations (0.4ms)[0m   [0mSELECT `site_mappings`.`id` AS t0_r0, `site_mappings`.`path_segment` AS t0_r1, `site_mappings`.`chunk_id` AS t0_r2, `site_mappings`.`version` AS t0_r3, `site_mappings`.`updated_at` AS t0_r4, `site_mappings`.`root_id` AS t0_r5, `site_mappings`.`parent_id` AS t0_r6, `site_mappings`.`depth` AS t0_r7, `site_mappings`.`lft` AS t0_r8, `site_mappings`.`rgt` AS t0_r9, `site_mappings`.`is_internal` AS t0_r10, `chunks`.`id` AS t1_r0, `chunks`.`description` AS t1_r1, `chunks`.`live_version` AS t1_r2, `chunks`.`mime_type_id` AS t1_r3, `chunks`.`mime_type_str` AS t1_r4, `chunk_versions`.`id` AS t2_r0, `chunk_versions`.`chunk_id` AS t2_r1, `chunk_versions`.`version` AS t2_r2, `chunk_versions`.`base_version` AS t2_r3, `chunk_versions`.`content` AS t2_r4, `chunk_versions`.`created_at` AS t2_r5, `chunk_versions`.`updated_at` AS t2_r6, `chunk_versions`.`comments` AS t2_r7, `mapping_labels`.`id` AS t3_r0, `mapping_labels`.`site_mapping_id` AS t3_r1, `mapping_labels`.`name` AS t3_r2, `mapping_labels`.`value` AS t3_r3, `parent_mappings_site_mappings`.`id` AS t4_r0, `parent_mappings_site_mappings`.`path_segment` AS t4_r1, `parent_mappings_site_mappings`.`chunk_id` AS t4_r2, `parent_mappings_site_mappings`.`version` AS t4_r3, `parent_mappings_site_mappings`.`updated_at` AS t4_r4, `parent_mappings_site_mappings`.`root_id` AS t4_r5, `parent_mappings_site_mappings`.`parent_id` AS t4_r6, `parent_mappings_site_mappings`.`depth` AS t4_r7, `parent_mappings_site_mappings`.`lft` AS t4_r8, `parent_mappings_site_mappings`.`rgt` AS t4_r9, `parent_mappings_site_mappings`.`is_internal` AS t4_r10, `mapping_labels_site_mappings`.`id` AS t5_r0, `mapping_labels_site_mappings`.`site_mapping_id` AS t5_r1, `mapping_labels_site_mappings`.`name` AS t5_r2, `mapping_labels_site_mappings`.`value` AS t5_r3 FROM `site_mappings` LEFT OUTER JOIN `chunks` ON `chunks`.id = `site_mappings`.chunk_id LEFT OUTER JOIN `chunk_versions` ON chunk_versions.chunk_id = chunks.id AND chunk_versions.version = chunks.live_version LEFT OUTER JOIN `mapping_labels` ON mapping_labels.site_mapping_id = site_mappings.id LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id LEFT OUTER JOIN `mapping_labels` mapping_labels_site_mappings ON mapping_labels_site_mappings.site_mapping_id = parent_mappings_site_mappings.id WHERE (site_mappings.path_segment like 'images' AND parent_mappings_site_mappings.path_segment like '' AND parent_mappings_site_mappings.parent_id IS NULL) AND `site_mappings`.id IN (2) [0m
+  [4;36;1mSiteMapping Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'parent_mappings_site_mappings_2.path_segment' in 'where clause': SELECT DISTINCT `site_mappings`.id FROM `site_mappings` LEFT OUTER JOIN `site_mappings` parent_mappings_site_mappings ON `parent_mappings_site_mappings`.id = `site_mappings`.parent_id WHERE (site_mappings.path_segment like 'background.gif' AND parent_mappings_site_mappings.path_segment like 'images' AND parent_mappings_site_mappings_2.path_segment like '' AND parent_mappings_site_mappings_2.parent_id IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 9) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 2) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 3) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 4) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE ((1 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 9) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE ((16 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 2) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE ((2 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 3) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE ((3 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 4) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE ((5 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 5) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE ((8 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`id` = 6) [0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM `site_mappings` WHERE ((9 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSiteMapping Delete all (0.3ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM `site_mappings` WHERE (`site_mappings`.`parent_id` IS NULL AND `site_mappings`.`path_segment` = '') LIMIT 1[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSiteMapping Delete all (10.7ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.3ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.3ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.3ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.3ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.3ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSiteMapping Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `site_mappings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `mapping_labels`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mChunk Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunks`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mChunkVersion Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `chunk_versions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSiteMapping Delete all (1.2ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (20.0ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.6ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.9ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSiteMapping Delete all (0.1ms)[0m   [0;1mDELETE FROM `site_mappings` [0m
+  [4;35;1mMappingLabel Delete all (0.0ms)[0m   [0mDELETE FROM `mapping_labels` [0m
+  [4;36;1mChunk Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunks` [0m
+  [4;35;1mChunkVersion Delete all (0.1ms)[0m   [0mDELETE FROM `chunk_versions` [0m
+  [4;36;1mMimeType Delete all (0.0ms)[0m   [0;1mDELETE FROM `mime_types` [0m
+  [4;35;1mFileExtension Delete all (0.0ms)[0m   [0mDELETE FROM `file_extensions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSiteMapping Delete all (0.1ms)[0m   [0mDELETE FROM `site_mappings` [0m
+  [4;36;1mMappingLabel Delete all (0.0ms)[0m   [0;1mDELETE FROM `mapping_labels` [0m
+  [4;35;1mChunk Delete all (0.0ms)[0m   [0mDELETE FROM `chunks` [0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM `chunk_versions` [0m
+  [4;35;1mMimeType Delete all (0.0ms)[0m   [0mDELETE FROM `mime_types` [0m
+  [4;36;1mFileExtension Delete all (0.0ms)[0m   [0;1mDELETE FROM `file_extensions` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `mapping_labels` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chunks` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `chunk_versions` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `site_mappings` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m

@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class ChunkVersionTest < Test::Unit::TestCase
+class ChunkVersionTest < ActiveSupport::TestCase
   fixtures :chunk_versions
 
   def test_truth

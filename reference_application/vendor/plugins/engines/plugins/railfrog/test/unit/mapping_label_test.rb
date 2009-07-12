@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class MappingLabelTest < Test::Unit::TestCase
+class MappingLabelTest < ActiveSupport::TestCase
   fixtures :mapping_labels
 
   def test_truth

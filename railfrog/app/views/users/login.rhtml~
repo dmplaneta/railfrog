@@ -1,0 +1,14 @@
+<h1><%= :login.l('Log In') %></h1>
+
+<% form_for @user, :url=>:action => 'authenticate', :controller => 'users' do |f|%>
+<p><label><%= :email.l('E-mail') %>:</label><br />
+<%= f.text_field :email %>
+</p>
+
+<p><label><%= :password.l('Password') %>:</label><br />
+<%= f.password_field :password %>
+</p>
+
+<p><%= f.submit :login.l('Log In') %></p>
+<% end %>
+

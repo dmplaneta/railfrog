@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class SiteMappingTest < Test::Unit::TestCase
+class SiteMappingTest < ActiveSupport::TestCase
 
   fixtures :site_mappings, :mapping_labels
 

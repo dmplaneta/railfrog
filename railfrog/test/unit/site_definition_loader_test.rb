@@ -1,9 +1,9 @@
 require 'fileutils'
 require File.dirname(__FILE__) + '/../test_helper'
-require File.dirname(__FILE__) + '/../../lib/site_loader'
-require File.dirname(__FILE__) + '/../../lib/definition_loader'
+require File.dirname(__FILE__) + '/../../lib/railfrog/site_loader'
+require File.dirname(__FILE__) + '/../../lib/railfrog/definition_loader'
 
-class SiteDefinitionLoaderTest < Test::Unit::TestCase
+class SiteDefinitionLoaderTest < ActiveSupport::TestCase
   include Railfrog
 
   fixtures :site_mappings, :mapping_labels, :chunks, :chunk_versions

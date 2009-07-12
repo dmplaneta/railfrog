@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class MimeTypeTest < Test::Unit::TestCase
+class MimeTypeTest < ActiveSupport::TestCase
   fixtures :mime_types
 
   def test_truth

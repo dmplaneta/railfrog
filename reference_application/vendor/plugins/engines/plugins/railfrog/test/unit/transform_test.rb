@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'railfrog'
 
-class TransformTest < Test::Unit::TestCase
+class TransformTest < ActiveSupport::TestCase
 
 
   def test_transform_manager

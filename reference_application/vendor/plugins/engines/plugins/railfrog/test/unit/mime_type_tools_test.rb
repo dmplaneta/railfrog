@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class MimeTypeToolsTest < Test::Unit::TestCase
+class MimeTypeToolsTest < ActiveSupport::TestCase
 
 
   def test_lookups

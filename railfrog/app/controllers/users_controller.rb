@@ -26,7 +26,7 @@ class UsersController < ApplicationController
       return
     end
   end
-  
+
   # Logout
   # ToDo: Return URI
   def logout

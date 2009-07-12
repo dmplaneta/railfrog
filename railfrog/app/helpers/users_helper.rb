@@ -10,7 +10,7 @@ module UsersHelper
 
     if User.count > 0
       flash[:error] = :please_login.l('Please Log In')
-      redirect_to :controller => 'users', :action => 'login'
+      redirect_to login_users_path
     else
       flash[:error] = :please_create_admin_user.l('Please Create Admin User')
       redirect_to :controller => 'users', :action => 'new'

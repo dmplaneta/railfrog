@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class FileExtensionTest < Test::Unit::TestCase
+class FileExtensionTest < ActiveSupport::TestCase
   fixtures :file_extensions
 
   def test_truth

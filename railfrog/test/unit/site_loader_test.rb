@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require File.dirname(__FILE__) + '/../../lib/site_loader'
+require File.dirname(__FILE__) + '/../../lib/railfrog/site_loader'
 
-class SiteLoaderTest < Test::Unit::TestCase
+class SiteLoaderTest < ActiveSupport::TestCase
   include Railfrog
 
   fixtures :site_mappings, :mapping_labels
