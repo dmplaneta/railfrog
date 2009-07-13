@@ -1,0 +1,7 @@
+<h1><%= t(:create_new_user) %></h1>
+
+<% form_for :user, @user, :url => { :action => 'create' } do |form| %>
+  <%= render :partial => 'form', :locals => { :form => form } %>
+  <%= submit_tag t(:save) %>
+<% end %>
+
