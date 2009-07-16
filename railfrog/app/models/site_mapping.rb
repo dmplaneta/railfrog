@@ -177,7 +177,7 @@ class SiteMapping < ActiveRecord::Base
 
     tree
   end
-=begin
+
   # need to drop all dependend mapping labels
   def before_destroy
     return if self.rgt.nil? || self.lft.nil?
@@ -186,5 +186,5 @@ class SiteMapping < ActiveRecord::Base
     MappingLabel.delete_all("site_mapping_id IN (#{ids.collect(&:id).join(', ')})") unless ids.empty?
     super
   end
-=end
+
 end

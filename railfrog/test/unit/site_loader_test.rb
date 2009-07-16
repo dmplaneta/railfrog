@@ -7,7 +7,7 @@ class SiteLoaderTest < ActiveSupport::TestCase
   fixtures :site_mappings, :mapping_labels
 
   def setup
-    SiteMapping.find_root.destroy
+    SiteMapping.root.destroy
     Chunk.destroy_all
     @dir = "test/fixtures/site_loader/without_site_yml"
     assert_equal 0, SiteMapping.count

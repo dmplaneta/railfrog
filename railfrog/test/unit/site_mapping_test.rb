@@ -48,7 +48,7 @@ class SiteMappingTest < ActiveSupport::TestCase
   end
 
   def test_find_root
-    common_test SiteMapping::ROOT_DIR, SiteMapping.find_root
+    common_test SiteMapping::ROOT_DIR, SiteMapping.root
     assert_equal @count, SiteMapping.count
 
     @root.destroy
@@ -59,7 +59,7 @@ class SiteMappingTest < ActiveSupport::TestCase
     assert_equal 1, SiteMapping.count
 
     # and now it should be returned from the db
-    common_test SiteMapping::ROOT_DIR, SiteMapping.find_root
+    common_test SiteMapping::ROOT_DIR, SiteMapping.root
     assert_equal 1, SiteMapping.count
   end
 
@@ -92,11 +92,11 @@ class SiteMappingTest < ActiveSupport::TestCase
 
     root = SiteMapping.find_root
     assert_equal 1, SiteMapping.count
-    assert_nil root.lft
-    assert_nil root.rgt
+    assert_equal 1, root.lft
+    assert_equal 2, root.rgt
     assert_nil root.parent_id
 
-    child1 = root.create_child_by_path_segment('cakes')
+    child1 = root.create_child_by_path_segment(:path_segment => 'cakes', :site=>root)
     assert_equal 2, SiteMapping.count
     assert_equal 1, root.lft
     assert_equal 2, child1.lft
@@ -105,7 +105,7 @@ class SiteMappingTest < ActiveSupport::TestCase
     assert_nil root.parent_id
     assert_equal root.id, child1.parent_id
 
-    child2 = child1.create_child_by_path_segment('chocolate_cakes')
+    child2 = child1.create_child_by_path_segment(:path_segment =>'chocolate_cakes', :site=>child1)
     root.reload
     assert_equal 3, SiteMapping.count
     assert_equal 1, root.lft
@@ -118,7 +118,7 @@ class SiteMappingTest < ActiveSupport::TestCase
     assert_equal root.id, child1.parent_id
     assert_equal child1.id, child2.parent_id
 
-    child3 = child2.create_child_by_path_segment('index.html')
+    child3 = child2.create_child_by_path_segment(:path_segment =>'index.html', :site=>child2)
     child1.reload
     root.reload
     assert_equal 4, SiteMapping.count
@@ -305,15 +305,7 @@ class SiteMappingTest < ActiveSupport::TestCase
   def test_destroy__simple_with_labels
     assert @count > 0
     assert MappingLabel.count > 0
-    puts "MappingLabel.count=#{MappingLabel.count}"
-    puts "full set=#{@root.full_set}"
     @root.destroy
-    puts "full set=#{@root.full_set}"
-    puts "MappingLabel.count=#{MappingLabel.count}, SiteMapping.count=#{SiteMapping.count}"
-    @mp=MappingLabel.find :all
-    @mp.each do |mp|
-      puts "mp=#{mp.id}"
-    end
     assert_equal 0, SiteMapping.count
     assert_equal 0, MappingLabel.count
   end
@@ -417,7 +409,7 @@ class SiteMappingTest < ActiveSupport::TestCase
 
   def test_process_labels
     result = { "index-page" => 'index.html' }
-    assert_equal result, SiteMapping.process_labels(SiteMapping.find_root)
+    assert_equal result, SiteMapping.process_labels(SiteMapping.root)
     assert_equal result, SiteMapping.process_labels(SiteMapping.find_mapping)
     assert_equal result, SiteMapping.process_labels(SiteMapping.find_mapping( ['images']))
     assert_equal result, SiteMapping.process_labels(SiteMapping.find_mapping( ['images', 'background.gif']))

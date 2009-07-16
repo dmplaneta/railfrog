@@ -30,14 +30,15 @@ class Railfrog::SiteDefinitionLoader
 
   private
   def self.parse_definition(parent_site_mapping, parent_node)
+    Railfrog::info "parent_site_mapping.root?=#{parent_site_mapping.root?}"
     if parent_site_mapping.root?
       load_labels(parent_site_mapping, parent_node)
     end
-
+    
     parent_node.each { |path_segment, node|
       next if path_segment == RF_LABELS_TAG || path_segment == RF_INTERNAL_TAG
 
-      site_mapping = parent_site_mapping.find_or_create_child(:path_segment => path_segment)
+      site_mapping = parent_site_mapping.find_or_create_child(:path_segment => path_segment, :site=>parent_site_mapping)
       Railfrog::info "    processing '#{site_mapping.full_path}'"
 
       load_labels(site_mapping, node)
