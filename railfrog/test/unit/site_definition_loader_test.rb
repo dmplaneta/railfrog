@@ -9,7 +9,8 @@ class SiteDefinitionLoaderTest < ActiveSupport::TestCase
   fixtures :site_mappings, :mapping_labels, :chunks, :chunk_versions
 
   def setup
-    SiteMapping.find_root.destroy
+    SiteMapping.find_root
+    sm=SiteMapping.root.destroy
     Chunk.destroy_all
     @dir = "test/fixtures/site_loader/with_site_yml"
     assert_equal 0, SiteMapping.count

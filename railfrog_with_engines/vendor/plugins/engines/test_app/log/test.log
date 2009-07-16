@@ -1,0 +1,267 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTests (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1-test_migration')[0m
+Migrating to CreateOthers (2)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "others" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('2-test_migration')[0m
+Migrating to CreateExtras (3)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "extras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('3-test_migration')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateExtras (3)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "extras"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '3-test_migration'[0m
+Migrating to CreateOthers (2)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "others"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '2-test_migration'[0m
+Migrating to CreateTests (1)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "tests"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '1-test_migration'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTests (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1-test_migration')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateTests (1)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOthers (2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "others" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('2-test_migration')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTests (1)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateOthers (2)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExtras (3)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "extras" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('3-test_migration')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateExtras (3)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "extras"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '3-test_migration'[0m
+Migrating to CreateOthers (2)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "others"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '2-test_migration'[0m
+Migrating to CreateTests (1)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "tests"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '1-test_migration'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing AppAndPluginController#an_action (for 0.0.0.0 at 2009-07-14 12:00:50) [GET]
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/app_and_plugin/an_action]
+
+
+Processing Namespace::AppAndPluginController#an_action (for 0.0.0.0 at 2009-07-14 12:00:50) [GET]
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/namespace/app_and_plugin/an_action]
+
+
+Processing Namespace::SharedPluginController#an_action (for 0.0.0.0 at 2009-07-14 12:00:50) [GET]
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/namespace/shared_plugin/an_action]
+
+
+Processing SharedPluginController#an_action (for 0.0.0.0 at 2009-07-14 12:00:50) [GET]
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/shared_plugin/an_action]
+
+
+Processing Namespace::AlphaPluginController#an_action (for 0.0.0.0 at 2009-07-14 12:00:50) [GET]
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/namespace/alpha_plugin/an_action]
+
+
+Processing AlphaPluginController#an_action (for 0.0.0.0 at 2009-07-14 12:00:50) [GET]
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/alpha_plugin/an_action]
+
+
+Processing TestRoutingController#test_named_routes_from_plugin (for 0.0.0.0 at 2009-07-14 12:00:50) [GET]
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/routes/test_named_routes_from_plugin]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering template within layouts/assets
+Rendering assets/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering template within layouts/assets
+Rendering assets/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering template within layouts/assets
+Rendering assets/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering template within layouts/assets
+Rendering assets/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering template within layouts/assets
+Rendering assets/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering template within layouts/assets
+Rendering assets/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing Namespace::AppAndPluginController#a_view (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering namespace/app_and_plugin/a_view
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/namespace/app_and_plugin/a_view]
+
+
+Processing Namespace::SharedPluginController#a_view (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering namespace/shared_plugin/a_view
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/namespace/shared_plugin/a_view]
+
+
+Processing Namespace::AlphaPluginController#a_view (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering namespace/alpha_plugin/a_view
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/namespace/alpha_plugin/a_view]
+
+
+Processing AppAndPluginController#a_view (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering app_and_plugin/a_view
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/app_and_plugin/a_view]
+
+
+Processing SharedPluginController#a_view (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering shared_plugin/a_view
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/shared_plugin/a_view]
+
+
+Processing AlphaPluginController#a_view (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering alpha_plugin/a_view
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/alpha_plugin/a_view]
+
+
+Processing AlphaPluginController#action_with_layout (for 0.0.0.0 at 2009-07-14 12:00:51) [GET]
+Rendering template within layouts/plugin_layout
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/alpha_plugin/action_with_layout]

@@ -4,7 +4,7 @@ require 'site_mapper_controller'
 # Re-raise errors caught by the controller.
 class SiteMapperController; def rescue_action(e) raise e end; end
 
-class SiteMapperControllerTest < Test::Unit::TestCase
+class SiteMapperControllerTest < ActiveSupport::TestCase
   FIXTURES = ['site_mappings', 'mapping_labels', 'chunks', 'chunk_versions']
 
   def setup

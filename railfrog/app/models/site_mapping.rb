@@ -12,30 +12,36 @@ class SiteMapping < ActiveRecord::Base
     :foreign_key => "parent_id"
 
   validates_uniqueness_of :path_segment, :scope => "parent_id"
-
+ 
   def self.find_root
-    SiteMapping.find_or_create_by_path_segment_and_parent_id(ROOT_DIR, nil)
+#    SiteMapping.find_or_create_by_path_segment_and_parent_id(ROOT_DIR, nil)
+    SiteMapping.create(:root_id=>1)
   end
 
   def find_or_create_child(params)
     child = find_child params[:path_segment]
     unless child
-      child = create_child params
+      child = create_child(params)
     end
     child
+
   end
 
   def find_child(path_segment)
-    SiteMapping.find_by_parent_id_and_path_segment(self.id, path_segment)
+
+    #SiteMapping.find_by_parent_id_and_path_segment(self.id, path_segment)
+    SiteMapping.find_by_path_segment(path_segment)
   end
 
-  def create_child_by_path_segment(path_segment)
-    create_child({:path_segment => path_segment})
+  def create_child_by_path_segment(params)
+    create_child(params)
   end
 
   def create_child(params)
-    child = SiteMapping.create(params)
-    add_child(child)
+      node=params[:site]
+    child = SiteMapping.create(:path_segment=>params[:path_segment])
+#    add_child(child)
+    child.move_to_child_of(node)
     child.save!
     child
   end
@@ -120,13 +126,17 @@ class SiteMapping < ActiveRecord::Base
 
   # Full file path: +/+ or +/cakes+ or +/cakes/index.html+
   def full_path
-    p = self_and_ancestors.collect{|sm| sm.path_segment }.join(FILE_SEPARATOR)
+    p = self.self_and_ancestors.collect do |sm| 
+      sm.path_segment
+    end.join(FILE_SEPARATOR)
     p = FILE_SEPARATOR + p unless p =~ /^\// 
     p
   end
 
   alias to_str full_path
 
+
+=begin
   def root
     SiteMapping.find_root
   end
@@ -140,15 +150,18 @@ class SiteMapping < ActiveRecord::Base
         && SiteMapping.count == 1)
   end
 
+
   def self_and_ancestors
     return [self] if self.lft.nil?
     SiteMapping.find(:all, :conditions => "(#{self.lft} BETWEEN lft AND rgt)", :order => 'lft' )
   end
 
+
   def level
     return 0 if self.parent_id.nil?
     SiteMapping.count(:conditions => "(#{self.lft} BETWEEN lft AND rgt)") - 1
   end
+=end
 
   def kid_dirs
     SiteMapping.find(:all,
@@ -164,7 +177,7 @@ class SiteMapping < ActiveRecord::Base
 
     tree
   end
-
+=begin
   # need to drop all dependend mapping labels
   def before_destroy
     return if self.rgt.nil? || self.lft.nil?
@@ -173,4 +186,5 @@ class SiteMapping < ActiveRecord::Base
     MappingLabel.delete_all("site_mapping_id IN (#{ids.collect(&:id).join(', ')})") unless ids.empty?
     super
   end
+=end
 end

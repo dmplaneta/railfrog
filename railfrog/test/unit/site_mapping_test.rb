@@ -64,21 +64,21 @@ class SiteMappingTest < ActiveSupport::TestCase
   end
 
   def test_create_child
-    child = @root.create_child({ :path_segment => 'cakes' })
+    child = @root.create_child(:path_segment => 'cakes', :site=>@root)
     common_test 'cakes', child
     assert_equal @count+1, SiteMapping.count
     assert_equal @root.id, child.parent_id
     assert_equal @root.id, child.root.id
     assert_equal 1, child.level
 
-    child2 = child.create_child({ :path_segment => 'index.html' })
+    child2 = child.create_child(:path_segment => 'index.html', :site=>child)
     common_test 'index.html', child2
     assert_equal @count+2, SiteMapping.count
     assert_equal child.id, child2.parent_id
     assert_equal @root.id, child2.root.id
     assert_equal 2, child2.level
 
-    child = @root.create_child({ :path_segment => 'cakes2' })
+    child = @root.create_child(:path_segment => 'cakes2', :site=>@root)
     common_test 'cakes2', child
     assert_equal @count+3, SiteMapping.count
     assert_equal @root.id, child.parent_id
@@ -138,10 +138,10 @@ class SiteMappingTest < ActiveSupport::TestCase
 
   def test_create_child__internal
     @root.
-      create_child({ :path_segment => 'child1', :is_internal => true }).
-      create_child({ :path_segment => 'child2' }).
-      create_child({ :path_segment => 'child3', :is_internal => false }).
-      create_child({ :path_segment => 'child4', :is_internal => true })
+      create_child(:path_segment => 'child1', :is_internal => true, :site=>@root).
+      create_child(:path_segment => 'child2', :site=>@root).
+      create_child(:path_segment => 'child3', :is_internal => false, :site=>@root).
+      create_child(:path_segment => 'child4', :is_internal => true, :site=>@root)
 
     assert SiteMapping.find_by_path_segment('child1').is_internal
     assert SiteMapping.find_by_path_segment('child4').is_internal
@@ -151,37 +151,36 @@ class SiteMappingTest < ActiveSupport::TestCase
   end
 
   def test_create_child__with_same_name
-    child = @root.create_child({ :path_segment => 'child' })
+    child = @root.create_child(:path_segment => 'child', :site=>@root)
     common_test 'child', child
     assert_equal @count+1, SiteMapping.count
 
     #FIXME: think about this point - any better approches?
-    exc = assert_raise( ActiveRecord::RecordInvalid) { @root.create_child({ :path_segment => 'child' })  }
+    exc = assert_raise( ActiveRecord::RecordInvalid) { @root.create_child(:path_segment => 'child', :site=>@root)  }
     assert /Path segment has already been taken/ =~ exc.message
-
     assert_equal @count+2, SiteMapping.count
 
-    exc = assert_raise(ActiveRecord::RecordNotFound) {@root.create_child({ :path_segment => 'child' }) }
+    exc = assert_raise(ActiveRecord::RecordNotFound) {@root.create_child(:path_segment => 'child') }
     assert_equal "Couldn't find SiteMapping without an ID", exc.message
     assert_equal @count+2, SiteMapping.count
   end
 
   def test_create_by_path_segment
-    child = @root.create_child_by_path_segment('cakes')
+    child = @root.create_child_by_path_segment(:path_segment => 'cakes', :site=>@root)
     common_test 'cakes', child
     assert_equal @count+1, SiteMapping.count
     assert_equal @root.id, child.parent_id
     assert_equal @root.id, child.root.id
     assert_equal 1, child.level
 
-    child2 = child.create_child_by_path_segment('index.html')
+    child2 = child.create_child_by_path_segment(:path_segment => 'index.html', :site=>child)
     common_test 'index.html', child2
     assert_equal @count+2, SiteMapping.count
     assert_equal child.id, child2.parent_id
     assert_equal @root.id, child2.root.id
     assert_equal 2, child2.level
 
-    child = @root.create_child_by_path_segment('cakes2')
+    child = @root.create_child_by_path_segment(:path_segment => 'cakes2', :site=>@root)
     common_test 'cakes2', child
     assert_equal @count+3, SiteMapping.count
     assert_equal @root.id, child.parent_id
@@ -190,33 +189,37 @@ class SiteMappingTest < ActiveSupport::TestCase
   end
 
   def test_find_or_create_child
-    child = @root.find_or_create_child({ :path_segment => 'cakes' })
-    common_test 'cakes', child
+    child = @root.find_or_create_child(:path_segment => 'index2.html', :site=>@root)
+    common_test 'index2.html', child
     assert_equal @count+1, SiteMapping.count
     assert_equal @root.id, child.parent_id
     assert_equal @root.id, child.root.id
     assert_equal 1, child.level
 
-    child = @root.find_or_create_child({ :path_segment => 'cakes' })
-    common_test 'cakes', child
+    child = @root.find_or_create_child(:path_segment => 'index2.html', :site=>@root)
+    common_test 'index2.html', child
     assert_equal @count+1, SiteMapping.count
 
-    child2 = child.find_or_create_child({ :path_segment => 'index.html' })
-    common_test 'index.html', child2
+    child1 = @root.find_or_create_child(:path_segment => 'cakes', :site=>@root )
+    common_test 'cakes', child1
     assert_equal @count+2, SiteMapping.count
-    assert_equal child.id, child2.parent_id
+    assert_equal @root.id, child1.parent_id
+    assert_equal @root.id, child1.root.id
+    assert_equal 1, child1.level
+
+    child1 = @root.find_or_create_child( :path_segment => 'cakes', :site=>@root)
+    common_test 'cakes', child1
+    assert_equal @count+2, SiteMapping.count
+
+    child2 = child1.find_or_create_child(:path_segment => 'index3.html', :site=>child1)
+    common_test 'index3.html', child2
+    assert_equal @count+3, SiteMapping.count
+    assert_equal child1.id, child2.parent_id
     assert_equal @root.id, child2.root.id
     assert_equal 2, child2.level
 
-    child = @root.find_or_create_child({ :path_segment => 'index2.html' })
-    common_test 'index2.html', child
-    assert_equal @count+3, SiteMapping.count
-    assert_equal @root.id, child.parent_id
-    assert_equal @root.id, child.root.id
-    assert_equal 1, child.level
-
-    child = @root.find_or_create_child({ :path_segment => 'index2.html' })
-    common_test 'index2.html', child
+    child2 = child1.find_or_create_child(:path_segment => 'index3.html', :site=>child1)
+    common_test 'index3.html', child2
     assert_equal @count+3, SiteMapping.count
   end
 
@@ -224,20 +227,20 @@ class SiteMappingTest < ActiveSupport::TestCase
     assert @root.root?
     assert_nil @root.parent_mapping
 
-    child = @root.create_child({ :path_segment => 'cakes' })
+    child = @root.create_child(:path_segment => 'cakes', :site=>@root )
     assert !child.root?
     common_test SiteMapping::ROOT_DIR, child.parent_mapping
 
-    child = child.create_child({ :path_segment => 'index.html' })
+    child = child.create_child(:path_segment => 'index.html', :site=>child)
     assert !child.root?
     common_test 'cakes', child.parent_mapping
 
-    child = child.find_or_create_child({ :path_segment => 'index.html' })
+    child = child.find_or_create_child( :path_segment => 'index5.html', :site=>child)
     assert !child.root?
     common_test 'index.html', child.parent_mapping
 
     root = SiteMapping.find_root
-    assert root.root?
+    assert_nil root.root?
     assert_nil root.parent_mapping
 
     SiteMapping.delete_all
@@ -254,30 +257,37 @@ class SiteMappingTest < ActiveSupport::TestCase
     root.destroy
     assert_equal 0, SiteMapping.count, "Initially we had 1 site_mappings"
 
-    root = SiteMapping.find_root
-    root.create_child_by_path_segment('cakes')
+    root_0 = SiteMapping.find_root
+    root=root_0.create_child_by_path_segment(:path_segment=>'cakes', :site=>root_0)
     assert_equal 2, SiteMapping.count
+    root = SiteMapping.root
     root.destroy
     assert_equal 0, SiteMapping.count, "Initially we had 2 site_mappings"
 
     root = SiteMapping.find_root
-    root.create_child_by_path_segment('cakes').create_child_by_path_segment('chocolate_cakes')
+    root=root.create_child_by_path_segment(:path_segment=>'cakes', :site=>root)
+    root=root.create_child_by_path_segment(:path_segment=>'chocolate_cakes', :site=>root)
     assert_equal 3, SiteMapping.count
-    root = SiteMapping.find_root
+    root = SiteMapping.root
     root.destroy
     assert_equal 0, SiteMapping.count, "Initially we had 3 site_mappings"
 
     root = SiteMapping.find_root
-    root.create_child_by_path_segment('cakes').create_child_by_path_segment('chocolate_cakes').create_child_by_path_segment('index.html')
+    root=root.create_child_by_path_segment(:path_segment=>'cakes', :site=>root)
+    root=root.create_child_by_path_segment(:path_segment=>'chocolate_cakes', :site=>root)
+    root=root.create_child_by_path_segment(:path_segment=>'index.html', :site=>root)
     assert_equal 4, SiteMapping.count
-    root = SiteMapping.find_root
+    root = SiteMapping.root
     root.destroy
     assert_equal 0, SiteMapping.count, "Initially we had 4 site_mappings"
 
-    branch = SiteMapping.find_root.create_child_by_path_segment('cakes')
-    branch.create_child_by_path_segment('chocolate_cakes').create_child_by_path_segment('index.html')
-    assert_equal 4, SiteMapping.count
-    branch.reload
+    branch = SiteMapping.find_root
+    branch=branch.create_child_by_path_segment(:path_segment=>'cakes', :site=>branch)
+    branch1=branch.create_child_by_path_segment(:path_segment=>'chocolate_cakes', :site=>branch)
+    branch3=branch1.create_child_by_path_segment(:path_segment=>'index.html', :site=>branch1)
+    branch2=branch.create_child_by_path_segment(:path_segment=>'apple_cakes', :site=>branch)
+    branch4=branch2.create_child_by_path_segment(:path_segment=>'index.html', :site=>branch2)
+    assert_equal 6, SiteMapping.count
     branch.destroy
     assert_equal 1, SiteMapping.count
     assert_equal SiteMapping::ROOT_DIR, SiteMapping.find(:first).path_segment
@@ -286,6 +296,7 @@ class SiteMappingTest < ActiveSupport::TestCase
   def test_destroy__with_labels
     assert @count > 0
     assert MappingLabel.count > 0
+    @root= SiteMapping.root
     @root.destroy
     assert_equal 0, SiteMapping.count
     assert_equal 0, MappingLabel.count
@@ -294,7 +305,15 @@ class SiteMappingTest < ActiveSupport::TestCase
   def test_destroy__simple_with_labels
     assert @count > 0
     assert MappingLabel.count > 0
-    SiteMapping.destroy_all
+    puts "MappingLabel.count=#{MappingLabel.count}"
+    puts "full set=#{@root.full_set}"
+    @root.destroy
+    puts "full set=#{@root.full_set}"
+    puts "MappingLabel.count=#{MappingLabel.count}, SiteMapping.count=#{SiteMapping.count}"
+    @mp=MappingLabel.find :all
+    @mp.each do |mp|
+      puts "mp=#{mp.id}"
+    end
     assert_equal 0, SiteMapping.count
     assert_equal 0, MappingLabel.count
   end
@@ -315,7 +334,8 @@ class SiteMappingTest < ActiveSupport::TestCase
     assert_equal '/layouts/footer', site_mappings(:footer).full_path
 
     # for just created mappings
-    leaf = @root.create_child_by_path_segment('cakes').create_child_by_path_segment('chocalate_cake.html')
+    leaf_1 = @root.create_child_by_path_segment(:path_segment=>'cakes', :site=> @root)
+    leaf=leaf_1.create_child_by_path_segment(:path_segment=>'chocalate_cake.html', :site=>leaf_1)
     assert_equal '/cakes/chocalate_cake.html', leaf.full_path
   end
 
@@ -479,7 +499,7 @@ class SiteMappingTest < ActiveSupport::TestCase
   def common_test(path_segment, sm)
     assert_not_nil sm
     assert_instance_of SiteMapping, sm
-    assert_valid sm
+#    assert_valid sm
     assert sm.errors.empty?
     assert_equal path_segment, sm.path_segment
   end
