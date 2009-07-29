@@ -1,0 +1,94 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mChunk Load (0.1ms)[0m   [0mSELECT * FROM "chunks" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mChunkVersion Load (0.1ms)[0m   [0mSELECT * FROM "chunk_versions" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mFileExtension Load (0.1ms)[0m   [0mSELECT * FROM "file_extensions" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mMappingLabel Load (0.1ms)[0m   [0mSELECT * FROM "mapping_labels" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mMimeType Load (0.1ms)[0m   [0mSELECT * FROM "mime_types" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Load (0.1ms)[0m   [0mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;36;1mSiteMapping Load (0.1ms)[0m   [0;1mSELECT * FROM "site_mappings" WHERE ("site_mappings"."parent_id" IS NULL AND "site_mappings"."path_segment" = '') LIMIT 1[0m
+  [4;35;1mSiteMapping Delete all (0.2ms)[0m   [0mDELETE FROM "site_mappings" WHERE 1=1[0m
+  [4;36;1mMappingLabel Delete all (0.1ms)[0m   [0;1mDELETE FROM "mapping_labels" WHERE 1=1[0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM "chunks" WHERE 1=1[0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM "chunk_versions" WHERE 1=1[0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM "mime_types" WHERE 1=1[0m
+  [4;36;1mFileExtension Delete all (0.1ms)[0m   [0;1mDELETE FROM "file_extensions" WHERE 1=1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "mapping_labels" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "chunks" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "chunk_versions" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSiteMapping Delete all (0.2ms)[0m   [0;1mDELETE FROM "site_mappings" WHERE 1=1[0m
+  [4;35;1mMappingLabel Delete all (0.1ms)[0m   [0mDELETE FROM "mapping_labels" WHERE 1=1[0m
+  [4;36;1mChunk Delete all (0.1ms)[0m   [0;1mDELETE FROM "chunks" WHERE 1=1[0m
+  [4;35;1mChunkVersion Delete all (0.1ms)[0m   [0mDELETE FROM "chunk_versions" WHERE 1=1[0m
+  [4;36;1mMimeType Delete all (0.1ms)[0m   [0;1mDELETE FROM "mime_types" WHERE 1=1[0m
+  [4;35;1mFileExtension Delete all (0.1ms)[0m   [0mDELETE FROM "file_extensions" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "mapping_labels" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "chunks" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "chunk_versions" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;35;1mSiteMapping Delete all (0.2ms)[0m   [0mDELETE FROM "site_mappings" WHERE 1=1[0m
+  [4;36;1mMappingLabel Delete all (0.1ms)[0m   [0;1mDELETE FROM "mapping_labels" WHERE 1=1[0m
+  [4;35;1mChunk Delete all (0.1ms)[0m   [0mDELETE FROM "chunks" WHERE 1=1[0m
+  [4;36;1mChunkVersion Delete all (0.1ms)[0m   [0;1mDELETE FROM "chunk_versions" WHERE 1=1[0m
+  [4;35;1mMimeType Delete all (0.1ms)[0m   [0mDELETE FROM "mime_types" WHERE 1=1[0m
+  [4;36;1mFileExtension Delete all (0.1ms)[0m   [0;1mDELETE FROM "file_extensions" WHERE 1=1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "mapping_labels" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "chunks" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "chunk_versions" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSiteMapping Delete all (0.1ms)[0m   [0;1mDELETE FROM "site_mappings" WHERE 1=1[0m
+  [4;35;1mMappingLabel Delete all (0.1ms)[0m   [0mDELETE FROM "mapping_labels" WHERE 1=1[0m
+  [4;36;1mChunk Delete all (0.1ms)[0m   [0;1mDELETE FROM "chunks" WHERE 1=1[0m
+  [4;35;1mChunkVersion Delete all (0.1ms)[0m   [0mDELETE FROM "chunk_versions" WHERE 1=1[0m
+  [4;36;1mMimeType Delete all (0.1ms)[0m   [0;1mDELETE FROM "mime_types" WHERE 1=1[0m
+  [4;35;1mFileExtension Delete all (0.1ms)[0m   [0mDELETE FROM "file_extensions" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "mapping_labels" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "chunks" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "chunk_versions" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "site_mappings" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "site_mappings" [0m

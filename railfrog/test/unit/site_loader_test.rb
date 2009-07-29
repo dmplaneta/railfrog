@@ -5,13 +5,13 @@ class SiteLoaderTest < ActiveSupport::TestCase
   include Railfrog
 
   fixtures :site_mappings, :mapping_labels
-
+  ROOT_DIR= File.dirname(__FILE__)
   def setup
     SiteMapping.root.destroy
     Chunk.destroy_all
-    @dir = "test/fixtures/site_loader/without_site_yml"
+    @dir = "test/fixtures/site_loader/without_site_yml/"
     assert_equal 0, SiteMapping.count
-    assert_equal 0, MappingLabel.count
+    assert_equal 5, MappingLabel.count
     assert_equal 0, Chunk.count
     assert_equal 0, ChunkVersion.count
   end
@@ -31,19 +31,6 @@ class SiteLoaderTest < ActiveSupport::TestCase
     assert_equal 0, ChunkVersion.count
   end
 
-  def test_files_only
-    dir = File.join(@dir, "files_only")
-    SiteLoader.load_site(dir)
-    assert_equal 4, SiteMapping.count
-    assert_equal 0, MappingLabel.count
-    assert_equal 3, Chunk.count
-    assert_equal 3, ChunkVersion.count
-
-    assert_not_nil SiteMapping.find_mapping(['file1.txt'])
-    assert_not_nil SiteMapping.find_mapping(['file2.html'])
-    assert_not_nil SiteMapping.find_mapping(['railfrog.jpg'])
-  end
-
   def test_dirs_only
     dir = File.join(@dir, "dirs_only")
     SiteLoader.load_site(dir)
@@ -57,6 +44,21 @@ class SiteLoaderTest < ActiveSupport::TestCase
     assert_not_nil SiteMapping.find_mapping(['dir1', 'dir2', 'dir3'])
     assert_not_nil SiteMapping.find_mapping(['dir4'])
   end
+
+  def test_files_only
+    dir = File.join(@dir, "files_only")
+    SiteLoader.load_site(dir)
+    assert_equal 4, SiteMapping.count
+    assert_equal 0, MappingLabel.count
+    assert_equal 3, Chunk.count
+    assert_equal 3, ChunkVersion.count
+
+    assert_not_nil SiteMapping.find_mapping(['file1.txt'])
+    assert_not_nil SiteMapping.find_mapping(['file2.html'])
+    assert_not_nil SiteMapping.find_mapping(['railfrog.jpg'])
+  end
+
+
 
   def test_mixed
     dir = File.join(@dir, "mixed")

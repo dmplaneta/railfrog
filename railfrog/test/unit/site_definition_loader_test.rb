@@ -9,12 +9,12 @@ class SiteDefinitionLoaderTest < ActiveSupport::TestCase
   fixtures :site_mappings, :mapping_labels, :chunks, :chunk_versions
 
   def setup
-    SiteMapping.find_root
-    sm=SiteMapping.root.destroy
+    sm=SiteMapping.root
+    sm.destroy
     Chunk.destroy_all
     @dir = "test/fixtures/site_loader/with_site_yml"
     assert_equal 0, SiteMapping.count
-    assert_equal 0, MappingLabel.count
+    assert_equal 5, MappingLabel.count
     assert_equal 0, Chunk.count
     assert_equal 0, ChunkVersion.count
   end
@@ -25,7 +25,7 @@ class SiteDefinitionLoaderTest < ActiveSupport::TestCase
     assert_equal "site.yml file is empty", exc.message
 
     assert_equal 0, SiteMapping.count
-    assert_equal 0, MappingLabel.count
+    assert_equal 5, MappingLabel.count
     assert_equal 0, Chunk.count
     assert_equal 0, ChunkVersion.count
   end
@@ -36,7 +36,7 @@ class SiteDefinitionLoaderTest < ActiveSupport::TestCase
     assert_equal "site.yml file contains no 'root' tag", exc.message
 
     assert_equal 0, SiteMapping.count
-    assert_equal 0, MappingLabel.count
+    assert_equal 5, MappingLabel.count
     assert_equal 0, Chunk.count
     assert_equal 0, ChunkVersion.count
   end
@@ -46,7 +46,7 @@ class SiteDefinitionLoaderTest < ActiveSupport::TestCase
     assert_nothing_raised { SiteLoader.load_site(dir)  }
 
     assert_equal 8, SiteMapping.count
-    assert_equal 6, MappingLabel.count
+    assert_equal 11, MappingLabel.count
     assert_equal 4, Chunk.count
     assert_equal 4, ChunkVersion.count
 
@@ -111,7 +111,7 @@ class SiteDefinitionLoaderTest < ActiveSupport::TestCase
 
   def subtest_railfrog_site
     assert_equal 20, SiteMapping.count
-    assert_equal 5, MappingLabel.count
+    assert_equal 10, MappingLabel.count
     assert_equal 16, Chunk.count
     assert_equal 16, ChunkVersion.count
 

@@ -67,13 +67,13 @@ module Railfrog
 
       if File.directory?(@@path)
         Railfrog::info "  Loading files"
+        puts "  Loading files path=#{path} SiteMapping.root=#{SiteMapping.root}"
         load_files
       end
     end
 
     private
     def self.load_files(parent=SiteMapping.root)
-
       Dir.foreach(File.join(@@path, parent.full_path)) {|f|
         if f != '.' && f != '..' && !SKIP_LIST.include?(f)
           site_mapping = parent.find_or_create_child({ :path_segment => f, :site=>parent })
@@ -97,7 +97,7 @@ module Railfrog
     end
 
     def self.dump_site(path)
-      root = SiteMapping.find_root
+      root = SiteMapping.root
 
       site_dir = File.join(path, SITE_DIR)
       root.full_set.each { |sm|
@@ -124,7 +124,7 @@ module Railfrog
       File.open(File.join(path, SITE_YML), "w") { |f| f.write(site_yml.to_yaml) }
     end
 
-    def self.site_yml(mapping = SiteMapping.find_root, hash = {})
+    def self.site_yml(mapping = SiteMapping.root, hash = {})
       kids = mapping.direct_children.inject({}) { |h, kid|
         site_yml(kid, h)
         h

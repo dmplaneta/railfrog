@@ -4,14 +4,14 @@ require 'site_mapper_controller'
 # Re-raise errors caught by the controller.
 class SiteMapperController; def rescue_action(e) raise e end; end
 
-class SiteMapperControllerTest < ActionController::TestCase
+class SiteMapperControllerTest < ActiveSupport::TestCase
   FIXTURES = ['site_mappings', 'mapping_labels', 'chunks', 'chunk_versions']
 
   def setup
     @controller = SiteMapperController.new
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
-=begin
+
     SiteMapping.delete_all
     MappingLabel.delete_all
     Chunk.delete_all
@@ -26,15 +26,13 @@ class SiteMapperControllerTest < ActionController::TestCase
 
 
     FIXTURES.each {|f|
-      fs = Fixtures.create_fixtures(RAILS_ROOT + "/test/fixtures/railfrog/", f)
-      
+      Fixtures.create_fixtures(RAILS_ROOT + "/test/fixtures/railfrog/", f)
     }
-=end
 
-    assert_equal 9, SiteMapping.count, "But got #{SiteMapping.count}"
-    assert_equal 6, MappingLabel.count
-    assert_equal 2, Chunk.count
-    assert_equal 2, ChunkVersion.count
+    assert_equal 20, SiteMapping.count, "But got #{SiteMapping.count}"
+    assert_equal 5, MappingLabel.count
+    assert_equal 16, Chunk.count
+    assert_equal 16, ChunkVersion.count
   end
 
     # 1. check layout
@@ -44,7 +42,7 @@ class SiteMapperControllerTest < ActionController::TestCase
   def test_
     get :show_chunk, :path => ['']
     assert_response :success
-    assert_select 'title', { :text => 'Railfrog / CMS Ridin&rsquo; on Rails', :count => 1 }
+    assert_select 'title', { :text => 'Rai197lfrog / CMS Ridin&rsquo; on Rails', :count => 1 }
   end
 
   def test_index_html

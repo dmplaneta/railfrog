@@ -78,22 +78,24 @@ class SiteMapping < ActiveRecord::Base
 
     path.reverse.each_with_index do |p, i|
       if i > 1
-        parent_mappings = { :parent_mapping => [ parent_mappings, :mapping_labels ] }
-        conditions << "parent_mappings_site_mappings_#{i}.path_segment like ?"
+#        parent_mappings = { :parent_mapping => [ parent_mappings, :mapping_labels ] }
+#        conditions << "parent_mappings_site_mappings_#{i}.path_segment like ?"
       elsif i == 1
         parent_mappings = { :parent_mapping => :mapping_labels }
         conditions << "parent_mappings_site_mappings.path_segment like ?"
+      bindings << p
       elsif i == 0
         conditions << "site_mappings.path_segment like ?"
-      end
       bindings << p
+      end
+
     end
 
     if path.size > 2
-      conditions << "parent_mappings_site_mappings_#{path.size - 1}.parent_id IS NULL"
+#      conditions << "parent_mappings_site_mappings_#{path.size - 1}.parent_id IS NULL"
     elsif path.size == 2
       conditions << "parent_mappings_site_mappings.parent_id IS NULL"
-      puts conditions
+      logger.debug ">>> conditions=#{conditions} <<<"
     elsif path.size == 1
       conditions << "site_mappings.parent_id IS NULL"
     end
