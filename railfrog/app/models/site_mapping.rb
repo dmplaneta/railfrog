@@ -38,14 +38,11 @@ class SiteMapping < ActiveRecord::Base
   end
 
   def create_child(params)
-    SiteMapping.transaction do
       node=params[:site]
-      child = SiteMapping.create(:path_segment=>params[:path_segment], :is_internal=>params[:is_internal])
-#    add_child(child)
+      child = SiteMapping.create(:path_segment=>params[:path_segment])
       child.move_to_child_of(node)
       child.save!
     child
-    end
   end
 
   # Finds all site_mappings including labels and chunk for last mappings 
@@ -82,6 +79,7 @@ class SiteMapping < ActiveRecord::Base
       if i > 1
 #        parent_mappings = { :parent_mapping => [ parent_mappings, :mapping_labels ] }
 #        conditions << "parent_mappings_site_mappings_#{i}.path_segment like ?"
+#        bindings << p
       elsif i == 1
         parent_mappings = { :parent_mapping => :mapping_labels }
         conditions << "parent_mappings_site_mappings.path_segment like ?"
@@ -94,7 +92,7 @@ class SiteMapping < ActiveRecord::Base
     end
 
     if path.size > 2
-#      conditions << "parent_mappings_site_mappings_#{path.size - 1}.parent_id IS NULL"
+ #     conditions << "parent_mappings_site_mappings_#{path.size - 1}.parent_id IS NULL"
     elsif path.size == 2
       conditions << "parent_mappings_site_mappings.parent_id IS NULL"
       logger.debug ">>> conditions=#{conditions} <<<"
