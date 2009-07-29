@@ -12,7 +12,7 @@ class SiteMapping < ActiveRecord::Base
     :foreign_key => "parent_id"
 
   validates_uniqueness_of :path_segment, :scope => "parent_id"
- 
+
   def self.find_root
 #    SiteMapping.find_or_create_by_path_segment_and_parent_id(ROOT_DIR, nil)
     SiteMapping.create(:root_id=>1)
@@ -38,12 +38,14 @@ class SiteMapping < ActiveRecord::Base
   end
 
   def create_child(params)
+    SiteMapping.transaction do
       node=params[:site]
-    child = SiteMapping.create(:path_segment=>params[:path_segment])
+      child = SiteMapping.create(:path_segment=>params[:path_segment], :is_internal=>params[:is_internal])
 #    add_child(child)
-    child.move_to_child_of(node)
-    child.save!
+      child.move_to_child_of(node)
+      child.save!
     child
+    end
   end
 
   # Finds all site_mappings including labels and chunk for last mappings 
@@ -182,11 +184,14 @@ class SiteMapping < ActiveRecord::Base
 
   # need to drop all dependend mapping labels
   def before_destroy
+      logger.info ">>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<"
     return if self.rgt.nil? || self.lft.nil?
     ids = SiteMapping.find_by_sql("select id from site_mappings where lft > #{self.lft} and rgt < #{self.rgt}")
-
+      logger.info "ids=#{ids}"
     MappingLabel.delete_all("site_mapping_id IN (#{ids.collect(&:id).join(', ')})") unless ids.empty?
-    super
+  #  super
   end
-
+  def after_destroy
+    logger.info ">>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<"
+  end
 end

@@ -158,11 +158,11 @@ class SiteMappingTest < ActiveSupport::TestCase
     #FIXME: think about this point - any better approches?
     exc = assert_raise( ActiveRecord::RecordInvalid) { @root.create_child(:path_segment => 'child', :site=>@root)  }
     assert /Path segment has already been taken/ =~ exc.message
-    assert_equal @count+2, SiteMapping.count
+    assert_equal @count+1, SiteMapping.count
 
-    exc = assert_raise(ActiveRecord::RecordNotFound) {@root.create_child(:path_segment => 'child') }
+    exc = assert_raise(ActiveRecord::RecordNotFound) {child =@root.create_child(:path_segment => 'child')}
     assert_equal "Couldn't find SiteMapping without an ID", exc.message
-    assert_equal @count+2, SiteMapping.count
+    assert_equal @count+1, SiteMapping.count
   end
 
   def test_create_by_path_segment
