@@ -30,7 +30,6 @@ class Railfrog::SiteDefinitionLoader
 
   private
   def self.parse_definition(parent_site_mapping, parent_node)
-    Railfrog::info "parent_site_mapping.root?=#{parent_site_mapping.root?}"
     if parent_site_mapping.root?
       load_labels(parent_site_mapping, parent_node)
     end

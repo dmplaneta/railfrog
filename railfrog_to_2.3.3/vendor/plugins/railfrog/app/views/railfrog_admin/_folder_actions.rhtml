@@ -1,0 +1,68 @@
+<div id="tabsMenu">
+
+  <ul id="folder_tabs" class="subsection_tabs">
+    <li><%= link_to_function(t(:folders), :class => :active) { |page| page.activate_tab 'one' } %></li>
+    <li><%= link_to_function(t(:documents)) { |page| page.activate_tab 'two' } %></li>
+    <li><%= link_to_function(t(:files)) { |page| page.activate_tab 'three' } %></li>
+    <li><%= link_to_function(t(:labels)) { |page| page.activate_tab 'four' } %></li>
+  </ul>
+
+  <div class="panelSet">
+    <div class="panel" id="one">
+      <ul>
+        <li>
+          <%= link_to_remote(t(:new_folder),
+                :url => {:action => 'new_folder', :parent_id => site_mapping}) %>
+        </li>
+        <% unless site_mapping.root? %>
+          <li>
+            <%= link_to_remote(t(:rename_folder),
+                  :url => {:action => 'rename_folder', :id => site_mapping}) %>
+          </li>
+          <li>
+            <%= link_to_remote(t(:delete_folder),
+                  :url => {:action => 'delete_folder', :mapping_id => site_mapping},
+                  :confirm => t(:are_you_sure)) %>
+          </li> 
+        <% end %>
+      </ul>  
+    </div>
+
+    <div class="panel" id="two"  style="display: none;">
+      <ul>
+        <li>
+          <%= link_to_remote(t(:new_markdown_document),
+                :url => {:action => 'new_chunk', :parent_id => site_mapping, :markup => :markdown}) %>
+        </li>
+        <li>
+          <%= link_to_remote(t(:new_textile_document),
+                :url => {:action => 'new_chunk', :parent_id => site_mapping, :markup => :textile}) %>
+        </li>
+        <li>
+          <%= link_to_remote(t(:new_html_document),
+                :url => {:action => 'new_chunk', :parent_id => site_mapping, :markup => :html}) %>
+        </li>	  
+      </ul>	
+    </div>
+
+    <div class="panel" id="three"  style="display: none;">
+      <ul>
+        <li>
+          <%= link_to_remote(t(:upload_file),
+                :url => {:action => 'upload_file', :mapping_id => site_mapping}) %>
+        </li>
+      </ul>	  
+    </div>
+
+    <div class="panel" id="four"  style="display: none;">
+      <ul>
+        <li>
+          <%= link_to_remote(t(:labels),
+                :url => { :action => 'show_labels',
+                :site_mapping_id => site_mapping}) %>
+        </li>
+      </ul>	  
+    </div>
+  </div>
+</div>
+

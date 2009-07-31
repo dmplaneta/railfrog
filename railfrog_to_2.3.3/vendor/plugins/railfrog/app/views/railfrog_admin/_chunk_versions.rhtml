@@ -1,0 +1,27 @@
+<h4><%= t(:document_versions) %></h4>
+
+<% unless chunk_versions.empty? then -%>
+  <table class="versions">
+    <tr>
+      <th><%= t(:version) %></th>
+      <th><%= t(:base_version) %></th>
+      <th><%= t(:created_at) %></th>
+      <th><%= t(:updated_at) %></th>
+      <th><%= t(:comments) %></th>
+      <th><%= t(:status) %></th>
+    </tr>
+
+    <% for version in chunk_versions -%>
+    <tr>
+      <td><%= version.version %></td>
+      <td><%= version.base_version %></td>
+      <td><%= version.created_at.to_formatted_s(:db) %></td>
+      <td><%= version.updated_at.to_formatted_s(:db) %></td>
+      <td><%= h version.comments %></td>
+      <td><%= (chunk.live_version == version.version) ? "<strong>#{t(:live)}</strong>" : link_to_remote(t(:put_live)), :url => { :action => 'put_live', :chunk_id => chunk, :version => version.version, :mapping_id => mapping_id }) %></td>
+
+  </tr>
+  <% end -%>
+  </table>
+<% end -%>
+

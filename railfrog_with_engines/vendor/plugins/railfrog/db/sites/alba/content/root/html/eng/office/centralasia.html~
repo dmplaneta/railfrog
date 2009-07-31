@@ -1,0 +1,29 @@
+    <div id='inner_content'>
+      <!-- <div id='ins'>юридическая компания "АЛЬБА-Групп". Карта-схема проезда</div> -->
+      <div id='innss'>  
+     
+        <p><b>Legal company ALBA GROUP</b> at “Central Asia” office has unified the lawyers who are carrying out their professional activity in different regions of the Kyrgyz Republic.</p>
+
+        <p>Lawyers of the “Central Asia” office have received and have improved professional skills in state authorities, large holdings and international companies operating in territory of the states of the Central Asia.</p>
+
+        <p>Experts of the “Central Asia” office possess experience of successful progress in territory of the Kyrgyz Republic of large investment projects from the foreign investors’ side, and also on legal support of projects of the European Union, UNDP, the Organizations on Security and Cooperation in Europe (OSCE), the World Bank etc.</p>
+        
+        <p>Lawyers of the “Central Asia” office provide a comprehensive range of services concerning the ALBA GROUP practice:</p>
+
+          <ul class="inner_menu">
+            <%= render :partial=>'alba/menu_practice_eng' %>
+          </ul>
+
+        <p>ALBA GROUP cooperates with well-known lawyers in the Central Asia, having extensive experience in conducting of cases in the Constitutional court, courts of general jurisdiction, and arbitration courts of the Kyrgyz Republic.</p>
+
+        <p>Legal company ALBA GROUP is capable to provide legal support and assistance in clients’ relations with state authorities of the Kyrgyz Republic both on central, and on local levels.</p>
+
+        <p>High performance of clients’ services is provided both by high skilled level of experts of legal company ALBA GROUP and by steady professional contacts in the Kyrgyz Republic. </p>
+        <a href='#' id="hide_content">Lawyers of the “Central Asia” office</a>
+      </div>
+
+      <div id='show_list'>
+          <%= render :partial=>'alba_lawyers/office_eng', :locals => {:office_id => "6"} %>
+      </div>
+
+  </div>

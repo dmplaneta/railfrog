@@ -1,0 +1,319 @@
+root:
+  rf-labels:
+    index-page: index.html
+    active_main_menu_item: "1"
+
+  index.html:
+    path: index.html
+    rf-labels:
+      layout: "mapping:/layouts/html_layout"
+      lng: ' '
+
+  index_rus.html:
+    path: index.html
+    rf-labels:
+      layout: "mapping:/layouts/html_layout"
+      lng: 'ru'
+
+  index_eng.html:
+    path: index.html
+    rf-labels:
+      layout: "mapping:/layouts/html_layout"
+      lng: 'en'
+
+
+  areas_of_practice_rus.html:
+    path: /html/rus/practice/practice.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      
+  areas_of_practice_eng.html:
+    path: /html/eng/practice/practice.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+
+  practice_bankruptcy_rus.html:
+    path: /html/rus/practice/practice_bankrupt.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "2"
+
+  practice_bankruptcy_eng.html:
+    path: /html/eng/practice/practice_bankrupt.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "2"
+
+  practice_commercial_rus.html:
+    path: /html/rus/practice/practice_commercial.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "9"
+
+  practice_commercial_eng.html:
+    path: /html/eng/practice/practice_commercial.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "9"
+
+  practice_corporate_rus.html:
+    path: /html/rus/practice/practice_corporate.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "6"
+
+  practice_corporate_eng.html:
+    path: /html/eng/practice/practice_corporate.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "6"
+
+  practice_customs_rus.html:
+    path: /html/rus/practice/practice_customs.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "8"
+
+  practice_customs_eng.html:
+    path: /html/eng/practice/practice_customs.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "8"
+
+  practice_real_estate_rus.html:
+    path: /html/rus/practice/practice_estate.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "4"
+
+  practice_real_estate_eng.html:
+    path: /html/eng/practice/practice_estate.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "4"
+
+  practice_land_rus.html:
+    path: /html/rus/practice/practice_land.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "3"
+
+  practice_land_eng.html:
+    path: /html/eng/practice/practice_land.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "3"
+
+  practice_investment_projects_rus.html:
+    path: /html/rus/practice/practice_maintain.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "1"
+
+  practice_investment_projects_eng.html:
+    path: /html/eng/practice/practice_maintain.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "1"
+
+  practice_tax_rus.html:
+    path: /html/rus/practice/practice_nalog.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "7"
+
+  practice_tax_eng.html:
+    path: /html/eng/practice/practice_nalog.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "7"
+
+  practice_dispute_resolution_rus.html:
+    path: /html/rus/practice/practice_regulator.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "10"
+
+  practice_dispute_resolution_eng.html:
+    path: /html/eng/practice/practice_regulator.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "10"
+
+  practice_natural_resources_rus.html:
+    path: /html/rus/practice/practice_subsoil.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "5"
+
+  practice_natural_resources_eng.html:
+    path: /html/eng/practice/practice_subsoil.html
+    rf-labels:
+      layout: "mapping:/layouts/html_practica_layout"
+      active_main_menu_item: "4"
+      active_menu_item: "5"
+
+  attorneys_rus.html:
+    path: /html/rus/attorneys.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "5"
+
+  attorneys_eng.html:
+    path: /html/eng/attorneys.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "5"
+
+  company_rus.html:
+    path: /html/rus/company.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "2"
+
+  company_eng.html:
+    path: /html/eng/company.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "2"
+
+  moscow_rus.html:
+    path: /html/rus/office/moscow.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "1"
+
+  moscow_eng.html:
+    path: /html/eng/office/moscow.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "1"
+
+  spb_rus.html:
+    path: /html/rus/office/spb.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "2"
+
+  spb_eng.html:
+    path: /html/eng/office/spb.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "2"
+
+  siberia_rus.html:
+    path: /html/rus/office/siberia.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "4"
+
+  siberia_eng.html:
+    path: /html/eng/office/siberia.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "4"
+
+  ural_rus.html:
+    path: /html/rus/office/ural.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "3"
+
+  ural_eng.html:
+    path: /html/eng/office/ural.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "3"
+
+  kazakhstan_rus.html:
+    path: /html/rus/office/kazakhstan.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "5"
+
+  kazakhstan_eng.html:
+    path: /html/eng/office/kazakhstan.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "5"
+
+  central_asia_rus.html:
+    path: /html/rus/office/centralasia.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "6"
+
+  central_asia_eng.html:
+    path: /html/eng/office/centralasia.html
+    rf-labels:
+      layout: "mapping:/layouts/html_office_layout"
+      active_main_menu_item: "3"
+      active_menu_item: "6"
+
+  contacts_rus.html:
+    path: /html/rus/contacts.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "6"
+
+  contacts_eng.html:
+    path: /html/eng/contacts.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "6"
+
+  sitemap_rus.html:
+    path: /html/rus/map.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "7"
+
+  sitemap_eng.html:
+    path: /html/eng/map.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "7"
+
+  thanks_rus.html:
+    path: /html/rus/thanks.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "6"
+
+  thanks_eng.html:
+    path: /html/eng/thanks.html
+    rf-labels:
+      layout: "mapping:/layouts/html_1_layout"
+      active_main_menu_item: "6"

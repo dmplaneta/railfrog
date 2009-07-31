@@ -1,0 +1,21 @@
+<%= error_messages_for 'chunk' %>
+<%= error_messages_for 'chunk_version' %>
+<%= error_messages_for 'site_mapping' %>
+
+<p><label for="site_mapping_path_segment"><%= t(:document_name) %></label><br/>
+<%= text_field 'site_mapping', 'path_segment'  %><br/>
+&nbsp; &nbsp; <%= t(:help_document_name_will_be_the_last_part_of_url) %></p>
+
+<p><label for="chunk_mime_type_str"><%= t(:document_type) %></label><br/>
+<%= text_field 'chunk', 'mime_type_str'  %></p>
+
+<p><label for="site_mapping_is_internal"><%= t(:is_internal) %></label><br/>
+<%= check_box 'site_mapping', 'is_internal'  %><br/>
+&nbsp; &nbsp; <%= t(:help_internal_documents_be_included_by_layouts) %></p>
+<p><label for="chunk_version_description"><%= t (:document_description) %></label><br/>
+<%= text_field 'chunk', 'description'  %></p>
+<p><label for="chunk_version_content"><%= t(:content) %></label><br/>
+<%= text_area 'chunk_version', 'content', :id => 'XinhaTextArea', :rows => '50', :columns => '80', :style => "width: 100%;"  %></p>
+<p><label for="chunk_version_comments"><%= t(:comments) %></label><br/>
+<%= text_field 'chunk_version', 'comments'  %></p>
+

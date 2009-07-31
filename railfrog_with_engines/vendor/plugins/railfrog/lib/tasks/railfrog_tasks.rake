@@ -4,6 +4,13 @@ require File.dirname(__FILE__) + '/../railfrog/site_loader'
 
 namespace :railfrog do
 
+  desc "Sync extra files from railfrog plugin."
+  task :sync do
+    system "rsync -ruv vendor/plugins/railfrog/db/migrate db"
+    system "rsync -ruv vendor/plugins/railfrog/public ."
+  end
+
+
   namespace :site do
 
     desc "Load site to database. Set path to the site directory using SITE=<path>"
@@ -11,6 +18,7 @@ namespace :railfrog do
       if ENV['SITE'].blank?
         raise "No SITE value given. Set SITE=db/sites/railfrog"
       else
+        puts "sdsdddd"
         Railfrog::SiteLoader.load_site(ENV['SITE'])
       end
     end

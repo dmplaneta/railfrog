@@ -1,0 +1,16 @@
+      <script type="text/javascript">
+          window.addEvent('domready', function(){
+            var myShow = new Slideshow('show', ['slide_1_big.jpg', 'slide_2_big.jpg', 'slide_3_big.jpg', 'slide_4_big.jpg',  'slide_7_big.jpg', 'slide_9_big.jpg', 'slide_10_big.jpg'], { captions: false, controller: false, delay: 3000, height: 448, hu: 'images/slide/', width: 500 });
+          });
+
+    </script>
+
+
+        <div id="show">
+          <img src="./images/slide/slide_1_big.jpg" width="500" height="448" alt="Юридическая компания Альба-Групп" >
+        </div>  
+
+
+
+	
+

@@ -1,0 +1,122 @@
+<%
+if params[:path].last =~ /^[a-z_]+rus.html/
+  lang = 'rus'
+  title = "Юридическая компания АЛЬБА ГРУПП"
+  copy = "Copyright &copy; Юридическая компания «АЛЬБА ГРУПП», 2009"
+else
+  lang = 'eng'
+  title = "ALBA GROUP"
+  copy = "Copyright &copy; Alba Group Ltd., 2009"
+end
+    str=params[:path].last
+    path=/.*_/.match(str)
+
+      main_menu_items = [
+        [ "index.html", "1", render_chunk(:path => "/content/#{lang}_main_menu_item_7")],
+        [ "company_#{lang}.html", "2", render_chunk(:path => "/content/#{lang}_main_menu_item_0")],
+        [ "moscow_#{lang}.html", "3", render_chunk(:path => "/content/#{lang}_main_menu_item_1")],
+        [ "areas_of_practice_#{lang}.html", "4", render_chunk(:path => "/content/#{lang}_main_menu_item_2") ],
+        [ "attorneys_#{lang}.html", "5", render_chunk(:path => "/content/#{lang}_main_menu_item_3") ],
+        [ "contacts_#{lang}.html", "6", render_chunk(:path => "/content/#{lang}_main_menu_item_5") ],
+        [ "sitemap_#{lang}.html", "7", render_chunk(:path => "/content/#{lang}_main_menu_item_6") ],
+      ]
+
+      practice_menu_items=[
+        [ "practice_investment_projects_#{lang}.html", "1", render_chunk(:path => "/content/#{lang}_practice_menu_item_0")],
+        [ "practice_land_#{lang}.html", "3", render_chunk(:path => "/content/#{lang}_practice_menu_item_2")],
+        [ "practice_real_estate_#{lang}.html", "4", render_chunk(:path => "/content/#{lang}_practice_menu_item_3")],
+        [ "practice_natural_resources_#{lang}.html", "5", render_chunk(:path => "/content/#{lang}_practice_menu_item_4")],
+        [ "practice_tax_#{lang}.html", "7", render_chunk(:path => "/content/#{lang}_practice_menu_item_6")],
+        [ "practice_customs_#{lang}.html", "8", render_chunk(:path => "/content/#{lang}_practice_menu_item_7")],
+        [ "practice_corporate_#{lang}.html", "6", render_chunk(:path => "/content/#{lang}_practice_menu_item_5")],
+        [ "practice_bankruptcy_#{lang}.html", "2", render_chunk(:path => "/content/#{lang}_practice_menu_item_1")],
+        [ "practice_commercial_#{lang}.html", "9", render_chunk(:path => "/content/#{lang}_practice_menu_item_8")],
+        [ "practice_dispute_resolution_#{lang}.html", "10", render_chunk(:path => "/content/#{lang}_practice_menu_item_9")],
+      ]
+  -%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%= title %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Инвестиционные проекты, Банкротство и реструктуризация, Земельные правоотношения, Налогообложнне, таможенное право, валютное регулирование, судебный процесс, арбитражный процесс, досудебное урегулирование споров, Юридическая компания, юристы, правовое сопровождение коммерческой деятельности" />
+<meta name="description" content="Описание различных направлений деятельности юридической компании АЛЬБА ГРУПП"> 
+
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+<script type="text/javascript" src="/js/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="/js/thickbox.js"></script>
+
+<link rel='stylesheet' href='/styles/style.css' type='text/css'/>
+
+</head>
+
+<body >
+
+
+    <div id='main_header'>
+      <img src="/images/logo.jpg" /> 
+      <ul id='language'>
+        <li><a href="<%= path %>rus.html">Русский</a>
+        <li><a href="<%= path %>eng.html">English</a>
+      </ul>
+    </div>
+    
+    <div id='main_menu'>
+
+      <ul class='main_menu'>
+        <% main_menu_items.each do |item| %>
+             <li>
+                
+                  <a <%= 'class="active"' if rf_labels['active_main_menu_item'] == item.at(1) %> href="<%= item.first %>"><%= item.last %></a>
+          </li>  
+        <% end %>
+      </ul>
+
+    </div>
+<br/>
+  <div id='wrapper'>
+<table width='100%' cellpadding='0' cellspacing='0' border='0' align='center'>
+ <tr>
+    <td valign='top' width='200px' align='left'>
+
+        <ul class='menu'>
+                <% practice_menu_items.each do |practice_item| -%>
+                  <li <%= (rf_labels['active_menu_item']== practice_item.at(1) ? "class='menu_active'" : "") %>>
+                    <a href="<%= practice_item.first%>"> <%= practice_item.last %> </a>
+                  </li>
+                <% end -%>
+        </ul>
+
+    </td>
+    <td>
+
+     <%= rf_labels['chunk_content'] %>
+
+  </td>
+  </tr>
+</table>
+</div>
+
+  <div id="downside">
+    <p align='right' style='color: #f9ddb5;'><%= copy %></p>
+  </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9162573-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- YaMetrics begin -->
+<script type="text/javascript"><!--
+var ya_cid=176130;
+//--></script>
+<script src="http://bs.yandex.ru/resource/watch.js" type="text/javascript"></script>
+<noscript><div style="display: inline;"><img src="http://bs.yandex.ru/watch/176130" width="1" height="1" alt=""></div></noscript>
+<!-- YaMetrics end -->
+</body>
+</html>

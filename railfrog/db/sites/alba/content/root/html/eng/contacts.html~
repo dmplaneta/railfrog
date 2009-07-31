@@ -1,0 +1,8 @@
+<script type="text/javascript" src="/js/thickbox.js"></script> 
+<h3>Our address in Moscow:</h3>
+<p style="font-size: 16px;"> 115035, Moscow, Sadovnicheskaya St., 72, b.1 <br/>phone: +7 499 530 17 33<br />
+fax:      +7 499 530 17 33<br /> email: <a href="mailto:info@alba-law.com">info@alba-law.com</a></p>
+<a href="images/map(600x500).png?height=500&width=600" class="thickbox" title="Moscow, Sadovnicheskaya St., 72, b.1">  <img src='images/map(100X100).png' style='border: solid 2px #500000;' /></a><br />
+
+
+  <%= render :partial=>'alba/information_eng' %>

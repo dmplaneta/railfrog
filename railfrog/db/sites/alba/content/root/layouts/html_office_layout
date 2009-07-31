@@ -1,0 +1,139 @@
+<%
+if params[:path].last =~ /^[a-z_]+rus.html/
+  lang = 'rus'
+  title = "Юридическая компания АЛЬБА ГРУПП"
+  copy = "Copyright &copy; «Юридическая компания «АЛЬБА ГРУПП», 2009"
+else 
+  lang = 'eng'
+  title = "ALBA GROUP"
+  copy = "Copyright &copy; Alba Group Ltd., 2009"
+end
+    str=params[:path].last
+    path=/.*_/.match(str)
+      main_menu_items = [
+        [ "index.html", "1", render_chunk(:path => "/content/#{lang}_main_menu_item_7")],
+        [ "company_#{lang}.html", "2", render_chunk(:path => "/content/#{lang}_main_menu_item_0")],
+        [ "moscow_#{lang}.html", "3", render_chunk(:path => "/content/#{lang}_main_menu_item_1")],
+        [ "areas_of_practice_#{lang}.html", "4", render_chunk(:path => "/content/#{lang}_main_menu_item_2") ],
+        [ "attorneys_#{lang}.html", "5", render_chunk(:path => "/content/#{lang}_main_menu_item_3") ],
+        [ "contacts_#{lang}.html", "6", render_chunk(:path => "/content/#{lang}_main_menu_item_5") ],
+        [ "sitemap_#{lang}.html", "7", render_chunk(:path => "/content/#{lang}_main_menu_item_6") ],
+      ]
+      office_menu_items =[
+        [ "moscow_#{lang}.html", "1", render_chunk(:path => "/content/#{lang}_office_menu_item_0")],
+        [ "spb_#{lang}.html", "2", render_chunk(:path => "/content/#{lang}_office_menu_item_1")],
+        [ "ural_#{lang}.html", "3", render_chunk(:path => "/content/#{lang}_office_menu_item_2")],
+        [ "siberia_#{lang}.html", "4", render_chunk(:path => "/content/#{lang}_office_menu_item_3")],
+        [ "kazakhstan_#{lang}.html", "5", render_chunk(:path => "/content/#{lang}_office_menu_item_4")],
+        [ "central_asia_#{lang}.html", "6", render_chunk(:path => "/content/#{lang}_office_menu_item_5")],
+      ]
+  -%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%= title %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Юридическая компания, Юридические услуги, Суды общей юрисдикции, Арбитражный суд, Юридическая фирма, Юрист, Юристы, Консультация юриста, Юридическая помощь, Оказание юридических услуг, Услуги адвоката, Правовое обеспечение, Юридическое обеспечение, Правовая поддержка, Юридическая поддержка, Юридическая фирма Казахстан, Юридическая фирма Кузбасс, Юридическая компания Казахстан, Юридическая компания Кузбасс" />
+<meta name="description" content="Юридическая компания АЛЬБА_ГРУПП, Московский офис, Северо-западный офис, Сибирский офис, Уральский офис, Центрально-азиатский офис, казахстанский офис"> 
+
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+<link rel='stylesheet' href='/styles/style.css' type='text/css'/>
+<link rel='stylesheet' href='/styles/thickbox.css' type='text/css' media="screen" />
+
+<script type="text/javascript" src="/js/jquery-latest.pack.js"></script>
+
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('#hide_content').click(function(){
+          $('#innss').hide('slow', function(){
+             $('#show_list').show('slow');
+          });
+        });
+        $('#hide_list').click(function(){
+          $('#show_list').hide('slow', function(){
+             $('#innss').show('slow');
+          });
+        });
+
+      });
+    </script>
+
+
+</head>
+
+<body >
+
+
+    <div id='main_header'>
+      <img src="/images/logo.jpg" />
+      <ul id='language'>
+        <li><a href="<%= path %>rus.html">Русский</a>
+        <li><a href="<%= path %>eng.html">English</a>
+      </ul>
+    </div>
+    
+    <div id='main_menu'>
+
+      <ul class='main_menu'>
+        <% main_menu_items.each do |item| %>
+             <li>
+                  <a <%= 'class="active"' if rf_labels['active_main_menu_item'] == item.at(1) %> href="<%= item.first %>"><%= item.last %></a>
+          </li>  
+        <% end %>
+      </ul>
+
+    </div>
+<br/>
+  <div id='wrapper'>
+<table width='100%' cellpadding='0' cellspacing='0' border='0' align='center'>
+ <tr>
+    <td valign='top' width='200px' align='left'>
+        <ul class='menu'>
+                  <% office_menu_items.each do |office_item| -%>
+                    <li <%= (rf_labels['active_menu_item']== office_item.at(1) ? "class='menu_active'" : "") %> >
+                     <a href="<%= office_item.first%>" ><%= office_item.last %> </a>
+                  </li>
+                <% end -%>
+        </ul>
+    </td>
+    <td>
+     <%= rf_labels['chunk_content'] %>
+  </td>
+  </tr>
+</table>
+</div>
+
+  <div id="downside">
+    <p align='right' style='color: #f9ddb5;'><%= copy %></p>
+  </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9162573-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+if(typeof(_gat)!='object')document.write('<sc'+'ript src="http'+
+(document.location.protocol=='https:'?'s://ssl':'://www')+
+'.google-analytics.com/ga.js"></sc'+'ript>')</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-9235921-1");
+pageTracker._trackPageview("/3643071325/goal");
+}catch(err){}</script>
+<!-- YaMetrics begin -->
+<script type="text/javascript"><!--
+var ya_cid=176130;
+//--></script>
+<script src="http://bs.yandex.ru/resource/watch.js" type="text/javascript"></script>
+<noscript><div style="display: inline;"><img src="http://bs.yandex.ru/watch/176130" width="1" height="1" alt=""></div></noscript>
+<!-- YaMetrics end -->
+</body>
+</html>

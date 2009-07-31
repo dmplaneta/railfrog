@@ -1,0 +1,96 @@
+<%
+  if rf_labels['lng'] ==' '
+    p=request.user_preferred_languages
+    put=p[0]
+  else
+    put=rf_labels['lng']
+  end
+if put == 'ru'
+  lang = 'rus'
+  title = "Юридическая компания АЛЬБА ГРУПП"
+  copy = "Copyright &copy; «Юридическая компания «АЛЬБА ГРУПП», 2009"
+else
+  lang = 'eng'
+  title = "ALBA GROUP"
+  copy = "Copyright &copy; Alba Group Ltd., 2009"
+end
+
+      main_menu_items = [
+        [ "company_#{lang}.html", render_chunk(:path => "/content/#{lang}_main_menu_item_0")],
+        [ "moscow_#{lang}.html", render_chunk(:path => "/content/#{lang}_main_menu_item_1")],
+        [ "areas_of_practice_#{lang}.html", render_chunk(:path => "/content/#{lang}_main_menu_item_2") ],
+        [ "attorneys_#{lang}.html", render_chunk(:path => "/content/#{lang}_main_menu_item_3") ],
+        [ "contacts_#{lang}.html", render_chunk(:path => "/content/#{lang}_main_menu_item_5") ],
+        [ "sitemap_#{lang}.html", render_chunk(:path => "/content/#{lang}_main_menu_item_6") ],
+      ]
+
+-%>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= title %></title>
+<meta name="keywords" content="Юридическая консультация, Юридическая компания, Юридические услуги, Юридическая фирма, Адвокат, Консультация юриста, Юридическая помощь, Юридическая компания, Оказание юридических услуг, Услуги адвоката, Правовое обеспечение, Юридическое обеспечение, Правовая поддержка, Юридическая поддержка, Юридическая фирма Казахстан, Юридическая фирма Кузбасс, Юридическая компания Казахстан, Юридическая компания Кузбасс" />
+
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+<link rel='stylesheet' href='/styles/slideshow.css' type='text/css' media='screen'/>
+
+<script type="text/javascript" src="js/mootools.js"></script>
+<script type="text/javascript" src="js/slideshow.js"></script>
+<link rel="stylesheet" href="/styles/style.css" type="text/css" />
+
+</head>
+
+<body>
+<script type="text/javascript">var MenuLinkedBy="AllWebMenus [4]",awmMenuName="menu",awmBN="754";awmAltUrl="";</script><script charset="UTF-8" src="menu_<%= lang %>.js" type="text/javascript"></script><script type="text/javascript">awmBuildMenu();</script>
+    <div id='main_header'>
+      <img src="/images/logo.jpg" /> 
+      <ul id='language'>
+        <li><a href="index_rus.html">Русский</a>
+        <li><a href="index_eng.html">English</a>
+      </ul>
+    </div>
+
+<div id="wrapper_index">
+  <table width='100%' cellpadding='0' cellspacing='0' border='0' align='center' >
+
+    <tr>
+      <td align="right" id='regions' width='33%'> 
+        <div ></div>
+      </td>
+      <td>  
+        <%= rf_labels['chunk_content'] %>
+      </td>
+      <td align='left' width='33%'>
+        <ul class='right_index_menu'>
+          <% main_menu_items.each do |item| %>
+            <li>
+              <a href="<%= item.first %>"><%= item.last %></a>
+            </li>  
+          <% end %>
+        </ul>
+       </td>
+     </tr>
+   </table>
+ </div>
+
+  <div id="downside">
+    <p align='right' style='color: #f9ddb5;'><%= copy %></p>
+  </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9162573-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- YaMetrics begin -->
+<script type="text/javascript"><!--
+var ya_cid=176130;
+//--></script>
+<script src="http://bs.yandex.ru/resource/watch.js" type="text/javascript"></script>
+<noscript><div style="display: inline;"><img src="http://bs.yandex.ru/watch/176130" width="1" height="1" alt=""></div></noscript>
+<!-- YaMetrics end -->
+</body>
+</html>
