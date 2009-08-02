@@ -1,8 +1,0 @@
-<script type="text/javascript" src="/js/thickbox.js"></script> 
-<h3>Наш адрес в Москве:</h3>
-<p style="font-size: 16px;"> 115035, г.Москва, Садовническая ул., д.72, стр.1 <br/>телефон: +7 499 530 17 33<br />
-факс:      +7 499 530 17 33<br /> Электронная почта: <a href="mailto:info@alba-law.com">info@alba-law.com</a></p>
-<a href="images/map(600x500).png?height=500&width=600" class="thickbox" title="Садовническая ул., д.72, стр.1">  <img src='images/map(100X100).png' style='border: solid 2px #500000;' /></a><br />
-
-
-  <%= render :partial=>'alba/information' %>

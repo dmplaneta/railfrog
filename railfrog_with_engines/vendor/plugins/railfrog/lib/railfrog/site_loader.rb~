@@ -50,12 +50,12 @@ module Railfrog
     SITE_YML = 'site.yml'
     SITE_DIR = 'root'
     SKIP_LIST = ['.svn']
-
+    IK =0
     # Loads site content from the file system. If path dir contains site.yml
     # file it will load content according to the site definition from the given YAML file.
     # Otherwise it will load all files from the path.
     def self.load_site(path)
-    Railfrog::info ">>>>>>>>>><<<<<<<<<<<<<<<<"
+      Railfrog::info "path=#{path}, i=#{IK}"
       @@path = path
       raise "There is no such dir #{path}" unless File.directory? path
 

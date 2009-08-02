@@ -55,6 +55,7 @@ module Railfrog
     # file it will load content according to the site definition from the given YAML file.
     # Otherwise it will load all files from the path.
     def self.load_site(path)
+      Railfrog::info "path=#{path}"
       @@path = path
       raise "There is no such dir #{path}" unless File.directory? path
 

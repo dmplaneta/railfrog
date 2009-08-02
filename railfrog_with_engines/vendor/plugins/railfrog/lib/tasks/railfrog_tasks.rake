@@ -18,7 +18,6 @@ namespace :railfrog do
       if ENV['SITE'].blank?
         raise "No SITE value given. Set SITE=db/sites/railfrog"
       else
-        puts "sdsdddd"
         Railfrog::SiteLoader.load_site(ENV['SITE'])
       end
     end
